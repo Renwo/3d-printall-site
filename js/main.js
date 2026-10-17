@@ -56,21 +56,56 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
 
-  /* ---------- Printer: gantry height + object growth, 8s loop ---------- */
+  /* ---------- Printer: cycles through maker objects, layer by layer ---------- */
   const fill = document.querySelector('.print__fill');
   const gantry = document.querySelector('.printer__gantry');
   const pct = document.getElementById('printPct');
   const bar = document.getElementById('printBar');
+  const file = document.getElementById('printFile');
   if (fill) {
-    const LOOP = 8000;
+    const svg = (viewBox, body) =>
+      `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}">${body}</svg>`)}")`;
+    const logo = document.querySelector('#i-logo');
+    const OBJECTS = [
+      {
+        name: '3dbenchy.gcode', f1: '#2dff60', f2: '#13b83f',
+        shape: svg('0 0 100 100',
+          '<path d="M3 60 L97 53 L90 76 Q84 94 68 100 L20 100 Q8 98 5 84 Z"/>' +
+          '<path fill-rule="evenodd" d="M20 59 L20 30 L64 30 L64 57 Z M27 37 h12 v12 h-12 Z M46 37 h11 v12 h-11 Z"/>' +
+          '<path d="M15 30 L69 30 L66 23 L18 23 Z M28 23 L28 6 Q33 3 38 6 L38 23 Z"/>'),
+      },
+      {
+        name: 'ingranaggio.gcode', f1: '#00d4ff', f2: '#0086b3',
+        shape: svg('0 0 100 100',
+          '<path fill-rule="evenodd" d="M41.5,14.9 44.6,6.3 55.4,6.3 58.5,14.9 61.7,15.8 68.7,9.9 78.0,15.3 76.4,24.3 78.7,26.6 87.7,25.0 93.1,34.3 87.2,41.3 88.1,44.5 96.7,47.6 96.7,58.4 88.1,61.5 87.2,64.7 93.1,71.7 87.7,81.0 78.7,79.4 76.4,81.7 78.0,90.7 68.7,96.1 61.7,90.2 58.5,91.1 55.4,99.7 44.6,99.7 41.5,91.1 38.3,90.2 31.3,96.1 22.0,90.7 23.6,81.7 21.3,79.4 12.3,81.0 6.9,71.7 12.8,64.7 11.9,61.5 3.3,58.4 3.3,47.6 11.9,44.5 12.8,41.3 6.9,34.3 12.3,25.0 21.3,26.6 23.6,24.3 22.0,15.3 31.3,9.9 38.3,15.8ZM39.0,53.0a11,11 0 1,0 22,0a11,11 0 1,0 -22,0ZM44.0,29.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM64.8,41.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM64.8,65.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM44.0,77.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM23.2,65.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM23.2,41.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0Z"/>'),
+      },
+      {
+        name: '3d_printall.gcode', f1: '#2dff60', f2: '#13b83f',
+        shape: svg(logo.getAttribute('viewBox'), logo.innerHTML.replaceAll('currentColor', '#000')),
+      },
+    ];
+
+    const PRINT = 8000, HOLD = 1400, LOOP = PRINT + HOLD;
+    let current = -1;
+    const setObject = (i) => {
+      const o = OBJECTS[i];
+      fill.style.webkitMaskImage = fill.style.maskImage = o.shape;
+      fill.style.setProperty('--f1', o.f1);
+      fill.style.setProperty('--f2', o.f2);
+      file.textContent = o.name;
+      current = i;
+    };
+
     const t0 = performance.now();
     const frame = (now) => {
-      const p = reduceMotion ? 1 : ((now - t0) % LOOP) / LOOP;
+      const t = reduceMotion ? PRINT : (now - t0) % LOOP;
+      const i = reduceMotion ? 0 : Math.floor((now - t0) / LOOP) % OBJECTS.length;
+      if (i !== current) setObject(i);
+      const p = Math.min(1, t / PRINT);
       gantry.style.setProperty('--p', p);
-      fill.style.height = `${p * 100}%`;
-      fill.style.webkitMaskSize = fill.style.maskSize = `100% ${(1 / Math.max(p, 0.001)) * 100}%`;
+      fill.style.clipPath = `inset(${(1 - p) * 100}% 0 0 0)`;
       const v = Math.floor(p * 100);
-      pct.textContent = `${v}%`;
+      pct.textContent = p < 1 ? `${v}%` : 'COMPLETATO ✓';
       bar.style.width = `${v}%`;
       if (!reduceMotion) requestAnimationFrame(frame);
     };

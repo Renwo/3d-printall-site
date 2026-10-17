@@ -10,7 +10,7 @@ Sito statico (HTML/CSS/JS puro, nessun build step) pubblicato con **GitHub Pages
 index.html        Pagina principale
 css/style.css     Stili e animazioni
 js/main.js        Interazioni (menu, contatori, animazione stampante, copia coupon)
-assets/           Favicon, immagine social, icone dei brand
+assets/           Logo (SVG + PNG), immagine social
 ```
 
 ## Anteprima in locale
@@ -27,4 +27,4 @@ python -m http.server 8000
 Ogni push sul branch `main` aggiorna il sito automaticamente
 (Settings → Pages → Source: *Deploy from a branch* → `main` / root).
 
-Icone dei brand: [Simple Icons](https://simpleicons.org) (CC0).
+Icone dei brand: [Simple Icons](https://simpleicons.org) (CC0), incorporate in `index.html`.
