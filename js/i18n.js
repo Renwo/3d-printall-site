@@ -18,7 +18,7 @@
       "hero.eyebrow": "<span class=\"dot\"></span> 3D Printing · DIY · Maker",
       "hero.t1": "Giving shape",
       "hero.t2": "to ideas.",
-      "hero.lead": "3D printing, laser engraving, electronics and DIY: real projects, from idea to finished piece. Every day, layer by layer.",
+      "hero.lead": "3D printing, laser engraving, electronics and DIY: real projects, from idea to finished piece. I also hunt down the best projects online, build them myself and share them with over <strong>500,000 followers</strong>.",
       "hero.cta1": "Follow me on social",
       "hero.cta2": "Download the models →",
       "stats.followers": "Total followers",
