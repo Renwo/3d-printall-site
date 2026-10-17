@@ -81,7 +81,7 @@
       "cta.eyebrow": "// 07 — Collaborations",
       "cta.title": "Got a product for makers?<br><span class=\"grad\">Let’s talk.</span>",
       "cta.sub": "Reviews, sponsorships and custom projects for brands in 3D printing, laser and tools.",
-      "footer.vat": "Bartiromo Giuseppe · VAT IT02753640032",
+      "footer.vat": "Bartiromo Giuseppe · VAT IT02753640032 · Novara, Italy",
       "nav.aria": "Main navigation",
       "nav.menu": "Open menu",
       "hero.scroll": "Scroll down",
