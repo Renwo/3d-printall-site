@@ -159,6 +159,41 @@
     requestAnimationFrame(draw);
   }
 
+  /* ---------- App showcase: feature tabs drive the phone screen ---------- */
+  const featureList = document.querySelector('.app__features');
+  if (featureList) {
+    const features = [...featureList.querySelectorAll('.feature')];
+    const shots = [...document.querySelectorAll('.phone__screen img')];
+    const DUR = 5000;
+    let active = 0, timer, paused = false, inView = false;
+    featureList.style.setProperty('--dur', `${DUR}ms`);
+
+    const show = (i) => {
+      active = (i + features.length) % features.length;
+      features.forEach((f, k) => {
+        const on = k === active;
+        f.classList.toggle('is-active', on);
+        f.setAttribute('aria-selected', on);
+        // restart the progress bar animation
+        const bar = f.querySelector('.feature__bar');
+        bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = '';
+      });
+      shots.forEach((s, k) => s.classList.toggle('is-active', k === active));
+      schedule();
+    };
+    const schedule = () => {
+      clearTimeout(timer);
+      if (!reduceMotion && !paused && inView) timer = setTimeout(() => show(active + 1), DUR);
+    };
+    const setPaused = (v) => { paused = v; featureList.classList.toggle('is-paused', v); v ? clearTimeout(timer) : show(active); };
+
+    features.forEach((f, k) => f.addEventListener('click', () => show(k)));
+    featureList.addEventListener('mouseenter', () => setPaused(true));
+    featureList.addEventListener('mouseleave', () => setPaused(false));
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; inView ? show(active) : clearTimeout(timer); }, { threshold: 0.3 })
+      .observe(featureList);
+  }
+
   /* ---------- Coupon copy ---------- */
   const toast = document.getElementById('toast');
   let toastTimer;
