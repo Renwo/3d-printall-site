@@ -582,6 +582,13 @@ p { margin: 0; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Services ---------- */
+.svc-audience {
+  display: inline-flex; align-items: center; gap: .55rem; margin: -.2rem 0 1.1rem;
+  padding: .4em 1em; border-radius: 999px;
+  font-weight: 600; color: var(--accent);
+  background: rgba(45,255,96,.08); border: 1px solid rgba(45,255,96,.35);
+}
+.svc-audience::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
 .svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .svc {
   display: flex; flex-direction: column; overflow: hidden;
