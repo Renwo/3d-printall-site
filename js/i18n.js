@@ -140,6 +140,8 @@
       "ap.faqTitle": "Frequently asked questions",
       "ap.q1": "Is the app free?",
       "ap.a1": "Yes, you can download it for free from Google Play.",
+      "ap.qIos": "Is it available for iOS?",
+      "ap.aIos": "Not at the moment: the app is only available for Android, on Google Play.",
       "ap.q2": "Do I need to create an account?",
       "ap.a2": "No. No sign-up is needed and all your data stays saved on your phone.",
       "ap.q3": "Does it work with resin printers too?",
