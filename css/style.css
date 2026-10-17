@@ -487,6 +487,29 @@ p { margin: 0; }
 @keyframes spin { from { transform: rotateX(-25deg) rotateY(0); } to { transform: rotateX(-25deg) rotateY(360deg); } }
 .model-card:hover .cube { animation-duration: 3s; }
 
+/* Share your print callout */
+.share {
+  margin-top: 1.5rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap;
+  padding: 1.5rem 1.8rem; border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(45,255,96,.09), rgba(0,212,255,.05) 60%), var(--surface);
+  border: 1px dashed rgba(45,255,96,.45);
+}
+.share__icon {
+  display: grid; place-items: center; width: 56px; height: 56px; flex-shrink: 0;
+  border-radius: 16px; background: rgba(45,255,96,.12); font-size: 1.7rem;
+}
+.share__text { flex: 1 1 300px; }
+.share__text h3 { font-size: 1.25rem; margin-bottom: .25rem; }
+.share__text p { color: var(--muted); }
+.share__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.share__tags a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .5em .9em; border-radius: 999px; font-size: .9rem;
+  background: var(--bg); border: 1px solid var(--border); color: var(--text);
+  transition: border-color .25s, color .25s, transform .25s;
+}
+.share__tags a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
 /* ---------- Deals ---------- */
 .deal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .deal {

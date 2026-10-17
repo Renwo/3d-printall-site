@@ -155,6 +155,8 @@
       "sv.title": "Your project, <span class=\"grad\">made by me</span>",
       "footer.terms": "Terms of sale",
       "sv.terms": "Read the terms of sale",
+      "models.shareTitle": "Printed one of my models?",
+      "models.shareText": "Share a photo on social media and tag my pages: I repost your prints on my channels!",
       "sv.audience": "For individuals and businesses",
       "sv.sub": "The same machines and the same care you see in my videos, at the service of your idea: 3D printing and laser engraving on demand.",
       "sv.printTitle": "3D printing on demand",
