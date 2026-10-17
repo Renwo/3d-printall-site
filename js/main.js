@@ -174,6 +174,10 @@
       chips.forEach(x => { x.classList.toggle('is-on', x === c); x.setAttribute('aria-pressed', x === c); });
     }));
     const SERVICE_KEYS = { print: 'sv.optPrint', laser: 'sv.optLaser', both: 'sv.optBoth' };
+    const TO = '3d.printall.contacts@gmail.com';
+    const fallback = document.getElementById('quoteFallback');
+    let draft = null;
+
     quoteSend.addEventListener('click', () => {
       const vars = {
         service: t(SERVICE_KEYS[service]),
@@ -181,9 +185,28 @@
         file: t(document.getElementById('quoteFile').checked ? 'sv.yes' : 'sv.no'),
         desc: document.getElementById('quoteDesc').value.trim() || '—',
       };
-      const subject = encodeURIComponent(t('sv.mailSubject', vars));
-      const body = encodeURIComponent(t('sv.mailBody', vars));
-      window.location.href = `mailto:3d.printall.contacts@gmail.com?subject=${subject}&body=${body}`;
+      draft = { subject: t('sv.mailSubject', vars), body: t('sv.mailBody', vars) };
+      const su = encodeURIComponent(draft.subject), bo = encodeURIComponent(draft.body);
+
+      // mailto only works with a desktop/mobile mail app: offer webmail as a fallback
+      document.getElementById('quoteGmail').href =
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${TO}&su=${su}&body=${bo}`;
+      document.getElementById('quoteOutlook').href =
+        `https://outlook.live.com/mail/0/deeplink/compose?to=${TO}&subject=${su}&body=${bo}`;
+      fallback.hidden = false;
+      window.location.href = `mailto:${TO}?subject=${su}&body=${bo}`;
+    });
+
+    document.getElementById('quoteCopy').addEventListener('click', async () => {
+      if (!draft) return;
+      const text = `${t('sv.mailTo')}: ${TO}\n${t('sv.mailSubjectLabel')}: ${draft.subject}\n\n${draft.body}`;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = Object.assign(document.createElement('textarea'), { value: text });
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      showToast(t('sv.copiedText'));
     });
   }
 

@@ -12,6 +12,9 @@
       "sv.yes": "sì",
       "sv.no": "no",
       "sv.mailSubject": "Richiesta preventivo — {service}",
+      "sv.copiedText": "Testo copiato ✓",
+      "sv.mailTo": "A",
+      "sv.mailSubjectLabel": "Oggetto",
       "sv.mailBody": "Ciao,\n\nvorrei un preventivo per: {service}\nQuantità: {qty}\nHo già il file o un disegno: {file}\n\nDescrizione:\n{desc}\n\nGrazie!"
     },
     "en": {
@@ -159,7 +162,7 @@
       "sv.p4": "Advice on material and part strength",
       "sv.laserTitle": "Laser engraving",
       "sv.laserText": "Logos, names, drawings and text engraved with precision for gifts, gadgets and one-of-a-kind objects.",
-      "sv.l1": "Engraving on wood, leather, cardboard and other materials",
+      "sv.l1": "Engraving on wood, metal, leather, cardboard and other materials",
       "sv.l2": "Personalising your own items or ones I supply",
       "sv.l3": "Company logos, plaques and gadgets",
       "sv.l4": "From your vector file or an image",
@@ -177,7 +180,7 @@
       "sv.s3t": "I make it",
       "sv.s3d": "Printing or engraving, with a final check of the part.",
       "sv.s4t": "You receive it",
-      "sv.s4d": "Shipping or pick-up, whichever you prefer.",
+      "sv.s4d": "Shipping across Italy and Europe, or pick-up.",
       "sv.qTitle": "Request a quote",
       "sv.qText": "Pick the service and describe what you need: I'll draft the email, you just send it from your email app.",
       "sv.qService": "Service",
@@ -193,6 +196,12 @@
       "sv.yes": "yes",
       "sv.no": "no",
       "sv.mailSubject": "Quote request — {service}",
+      "sv.fbText": "Nothing opened? Send the email from here:",
+      "sv.fbCopy": "Copy the text",
+      "sv.fbTo": "Address:",
+      "sv.copiedText": "Text copied ✓",
+      "sv.mailTo": "To",
+      "sv.mailSubjectLabel": "Subject",
       "sv.mailBody": "Hi,\n\nI would like a quote for: {service}\nQuantity: {qty}\nI already have a file or drawing: {file}\n\nDescription:\n{desc}\n\nThank you!"
     }
   };

@@ -227,7 +227,7 @@
               <h3 data-i18n="sv.laserTitle">Incisione laser</h3>
               <p data-i18n="sv.laserText">Loghi, nomi, disegni e testi incisi con precisione per regali, gadget e oggetti unici.</p>
               <ul class="svc__list">
-                <li data-i18n="sv.l1">Incisione su legno, pelle, cartone e altri materiali</li>
+                <li data-i18n="sv.l1">Incisione su legno, metallo, pelle, cartone e altri materiali</li>
                 <li data-i18n="sv.l2">Personalizzazione di oggetti tuoi o forniti da me</li>
                 <li data-i18n="sv.l3">Loghi aziendali, targhe e gadget</li>
                 <li data-i18n="sv.l4">Dal tuo file vettoriale o da un'immagine</li>
@@ -251,7 +251,7 @@
           <li class="reveal"><span class="mono">01</span><strong data-i18n="sv.s1t">Raccontami il progetto</strong><span data-i18n="sv.s1d">Mandami il file, una foto o anche solo un'idea.</span></li>
           <li class="reveal"><span class="mono">02</span><strong data-i18n="sv.s2t">Ricevi il preventivo</strong><span data-i18n="sv.s2d">Ti rispondo con costi, materiali e tempi.</span></li>
           <li class="reveal"><span class="mono">03</span><strong data-i18n="sv.s3t">Lo realizzo</strong><span data-i18n="sv.s3d">Stampa o incisione, con controllo finale del pezzo.</span></li>
-          <li class="reveal"><span class="mono">04</span><strong data-i18n="sv.s4t">Lo ricevi</strong><span data-i18n="sv.s4d">Spedizione o ritiro, come preferisci.</span></li>
+          <li class="reveal"><span class="mono">04</span><strong data-i18n="sv.s4t">Lo ricevi</strong><span data-i18n="sv.s4d">Spedizione in Italia e in Europa, oppure ritiro.</span></li>
         </ol>
 
         <!-- Quote composer: builds an email, nothing is sent by the site -->
@@ -275,8 +275,8 @@
                 <span data-i18n="sv.qQty">Quantità</span>
                 <select id="quoteQty">
                   <option value="1">1</option>
-                  <option value="2–10">2–10</option>
-                  <option value="10–50">10–50</option>
+                  <option value="2-10">2–10</option>
+                  <option value="10-50">10–50</option>
                   <option value="50+">50+</option>
                 </select>
               </label>
@@ -287,6 +287,15 @@
             </div>
             <button type="button" class="btn btn--primary" id="quoteSend" data-i18n="sv.qSend">Prepara l'email →</button>
             <p class="quote__note" data-i18n="sv.qNote">Si aprirà il tuo programma di posta con il messaggio già scritto. Se hai file o foto, allegali lì.</p>
+            <div class="quote__fallback" id="quoteFallback" hidden>
+              <p data-i18n="sv.fbText">Non si è aperto nulla? Invia l'email da qui:</p>
+              <div class="quote__row">
+                <a class="chip" id="quoteGmail" href="#" target="_blank" rel="noopener">Gmail</a>
+                <a class="chip" id="quoteOutlook" href="#" target="_blank" rel="noopener">Outlook</a>
+                <button type="button" class="chip" id="quoteCopy" data-i18n="sv.fbCopy">Copia il testo</button>
+              </div>
+              <p class="quote__note"><span data-i18n="sv.fbTo">Indirizzo:</span> <a href="mailto:3d.printall.contacts@gmail.com">3d.printall.contacts@gmail.com</a></p>
+            </div>
           </div>
         </div>
       </div>

@@ -700,6 +700,16 @@ p { margin: 0; }
 .quote__check { display: flex; align-items: center; gap: .6rem; cursor: pointer; padding-bottom: .7em; }
 .quote__check input { width: 18px; height: 18px; accent-color: var(--accent); }
 .quote__note { font-size: .85rem; color: var(--muted); }
+.quote__note a { color: var(--accent); }
+.quote__fallback {
+  width: 100%; display: grid; gap: .7rem; padding-top: 1.1rem;
+  border-top: 1px dashed rgba(45,255,96,.3);
+  animation: fadeUp .4s ease;
+}
+.quote__fallback[hidden] { display: none; }
+.quote__fallback > p:first-child { font-weight: 600; }
+a.chip { display: inline-block; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } }
 
 /* ---------- Home: app teaser ---------- */
 .teaser { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
