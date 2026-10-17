@@ -50,6 +50,7 @@
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Navigazione principale" data-i18n-attr="aria-label:nav.aria">
         <a href="#social">Social</a>
+        <a href="#servizi" data-i18n="nav.services">Servizi</a>
         <a href="app/">App</a>
         <a href="#modelli" data-i18n="nav.models">Modelli 3D</a>
         <a href="#offerte" data-i18n="nav.deals">Offerte</a>
@@ -183,12 +184,120 @@
       </div>
     </section>
 
+    <!-- ============ SERVIZI ============ -->
+    <section class="section section--alt services" id="servizi">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow mono" data-i18n="sv.eyebrow">// 02 — Servizi</p>
+          <h2 data-i18n="sv.title">Il tuo progetto, <span class="grad">realizzato da me</span></h2>
+          <p class="section__sub" data-i18n="sv.sub">Le stesse macchine e la stessa cura che vedi nei miei video, al servizio della tua idea: stampa 3D e incisione laser su richiesta.</p>
+        </header>
+
+        <div class="svc-grid">
+          <!-- 3D printing -->
+          <article class="svc reveal">
+            <div class="svc__visual svc__visual--print" aria-hidden="true">
+              <div class="layers">
+                <span style="--w:34%;--i:9"></span><span style="--w:46%;--i:8"></span><span style="--w:56%;--i:7"></span>
+                <span style="--w:62%;--i:6"></span><span style="--w:66%;--i:5"></span><span style="--w:68%;--i:4"></span>
+                <span style="--w:66%;--i:3"></span><span style="--w:60%;--i:2"></span><span style="--w:52%;--i:1"></span>
+                <span style="--w:58%;--i:0"></span>
+              </div>
+              <span class="svc__label mono">FDM · MULTICOLOR</span>
+            </div>
+            <div class="svc__body">
+              <h3 data-i18n="sv.printTitle">Stampa 3D su richiesta</h3>
+              <p data-i18n="sv.printText">Dal tuo file o da un'idea da sviluppare insieme: pezzi unici, ricambi, prototipi e piccole serie.</p>
+              <ul class="svc__list">
+                <li data-i18n="sv.p1">Stampa da file STL, 3MF o STEP</li>
+                <li data-i18n="sv.p2">Prototipi, ricambi e oggetti personalizzati</li>
+                <li data-i18n="sv.p3">Più materiali e colori, anche multicolore</li>
+                <li data-i18n="sv.p4">Consigli su materiale e resistenza del pezzo</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Laser engraving -->
+          <article class="svc reveal">
+            <div class="svc__visual svc__visual--laser" aria-hidden="true">
+              <svg class="engrave" viewBox="140 6 784 1036"><path d="M326,100 418,20 458,73 447,143 413,112 375,147Z" pathLength="1" style="--i:0"/><path d="M740,100 648,20 608,73 619,143 653,112 691,147Z" pathLength="1" style="--i:1"/><path d="M413,127 450,167 612,167 650,127 632,310 532,392 432,310Z" pathLength="1" style="--i:2"/><path d="M505,308 560,308 582,328 533,372 484,328Z" pathLength="1" style="--i:3"/><polygon points="533,425 163,1020 903,1020" pathLength="1" style="--i:4"/><line x1="535" y1="440" x2="498" y2="658" pathLength="1" style="--i:5"/><line x1="392" y1="660" x2="500" y2="668" pathLength="1" style="--i:6"/><line x1="505" y1="664" x2="652" y2="626" pathLength="1" style="--i:7"/><line x1="652" y1="624" x2="678" y2="866" pathLength="1" style="--i:8"/><line x1="505" y1="668" x2="668" y2="858" pathLength="1" style="--i:9"/><line x1="388" y1="662" x2="400" y2="830" pathLength="1" style="--i:10"/><line x1="402" y1="834" x2="668" y2="872" pathLength="1" style="--i:11"/><line x1="405" y1="835" x2="170" y2="1015" pathLength="1" style="--i:12"/><line x1="410" y1="840" x2="585" y2="1015" pathLength="1" style="--i:13"/><line x1="672" y1="872" x2="590" y2="1015" pathLength="1" style="--i:14"/><line x1="675" y1="868" x2="898" y2="1015" pathLength="1" style="--i:15"/></svg>
+              <span class="svc__label mono">LASER · ENGRAVING</span>
+            </div>
+            <div class="svc__body">
+              <h3 data-i18n="sv.laserTitle">Incisione laser</h3>
+              <p data-i18n="sv.laserText">Loghi, nomi, disegni e testi incisi con precisione per regali, gadget e oggetti unici.</p>
+              <ul class="svc__list">
+                <li data-i18n="sv.l1">Incisione su legno, pelle, cartone e altri materiali</li>
+                <li data-i18n="sv.l2">Personalizzazione di oggetti tuoi o forniti da me</li>
+                <li data-i18n="sv.l3">Loghi aziendali, targhe e gadget</li>
+                <li data-i18n="sv.l4">Dal tuo file vettoriale o da un'immagine</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Use cases -->
+        <ul class="svc-tags reveal" aria-label="Esempi" data-i18n-attr="aria-label:sv.examples">
+          <li data-i18n="sv.t1">🎁 Regali personalizzati</li>
+          <li data-i18n="sv.t2">🏷️ Gadget aziendali</li>
+          <li data-i18n="sv.t3">🔧 Pezzi di ricambio</li>
+          <li data-i18n="sv.t4">🧪 Prototipi</li>
+          <li data-i18n="sv.t5">🎭 Cosplay e props</li>
+          <li data-i18n="sv.t6">🪧 Targhe e insegne</li>
+        </ul>
+
+        <!-- Process -->
+        <ol class="svc-steps">
+          <li class="reveal"><span class="mono">01</span><strong data-i18n="sv.s1t">Raccontami il progetto</strong><span data-i18n="sv.s1d">Mandami il file, una foto o anche solo un'idea.</span></li>
+          <li class="reveal"><span class="mono">02</span><strong data-i18n="sv.s2t">Ricevi il preventivo</strong><span data-i18n="sv.s2d">Ti rispondo con costi, materiali e tempi.</span></li>
+          <li class="reveal"><span class="mono">03</span><strong data-i18n="sv.s3t">Lo realizzo</strong><span data-i18n="sv.s3d">Stampa o incisione, con controllo finale del pezzo.</span></li>
+          <li class="reveal"><span class="mono">04</span><strong data-i18n="sv.s4t">Lo ricevi</strong><span data-i18n="sv.s4d">Spedizione o ritiro, come preferisci.</span></li>
+        </ol>
+
+        <!-- Quote composer: builds an email, nothing is sent by the site -->
+        <div class="quote reveal" id="preventivo">
+          <div class="quote__intro">
+            <h3 data-i18n="sv.qTitle">Richiedi un preventivo</h3>
+            <p data-i18n="sv.qText">Scegli il servizio e descrivi cosa ti serve: preparo io l'email, a te basta inviarla dal tuo programma di posta.</p>
+          </div>
+          <div class="quote__form">
+            <div class="quote__row" role="group" aria-label="Servizio" data-i18n-attr="aria-label:sv.qService">
+              <button type="button" class="chip is-on" data-service="print" aria-pressed="true" data-i18n="sv.optPrint">Stampa 3D</button>
+              <button type="button" class="chip" data-service="laser" aria-pressed="false" data-i18n="sv.optLaser">Incisione laser</button>
+              <button type="button" class="chip" data-service="both" aria-pressed="false" data-i18n="sv.optBoth">Entrambi</button>
+            </div>
+            <label class="quote__field">
+              <span data-i18n="sv.qDescLabel">Cosa ti serve?</span>
+              <textarea id="quoteDesc" rows="3" placeholder="Es. un supporto per il telefono in PETG nero, circa 10 cm" data-i18n-attr="placeholder:sv.qDescPh"></textarea>
+            </label>
+            <div class="quote__row quote__row--split">
+              <label class="quote__field">
+                <span data-i18n="sv.qQty">Quantità</span>
+                <select id="quoteQty">
+                  <option value="1">1</option>
+                  <option value="2–10">2–10</option>
+                  <option value="10–50">10–50</option>
+                  <option value="50+">50+</option>
+                </select>
+              </label>
+              <label class="quote__check">
+                <input type="checkbox" id="quoteFile">
+                <span data-i18n="sv.qFile">Ho già il file o un disegno</span>
+              </label>
+            </div>
+            <button type="button" class="btn btn--primary" id="quoteSend" data-i18n="sv.qSend">Prepara l'email →</button>
+            <p class="quote__note" data-i18n="sv.qNote">Si aprirà il tuo programma di posta con il messaggio già scritto. Se hai file o foto, allegali lì.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ APP (teaser — full page in app/) ============ -->
     <section class="section app" id="app">
       <div class="container">
         <div class="teaser">
           <div class="teaser__copy reveal">
-            <p class="eyebrow mono" data-i18n="app.eyebrow">// 02 — La mia app</p>
+            <p class="eyebrow mono" data-i18n="app.eyebrow">// 03 — La mia app</p>
             <h2 data-i18n="app.title">Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
             <p class="section__sub" data-i18n="teaser.sub"><strong>3D Cost Estimation</strong> calcola prezzo e costi di ogni stampa 3D, FDM o resina, e tiene d'occhio quanto filamento ti resta su ogni bobina.</p>
             <div class="teaser__cta">
@@ -212,7 +321,7 @@
     <section class="section section--alt" id="modelli">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="models.eyebrow">// 03 — Modelli 3D</p>
+          <p class="eyebrow mono" data-i18n="models.eyebrow">// 04 — Modelli 3D</p>
           <h2 data-i18n="models.title">I miei modelli, pronti da stampare</h2>
           <p class="section__sub" data-i18n="models.sub">Scarica i file STL / 3MF dalle principali piattaforme.</p>
         </header>
@@ -244,7 +353,7 @@
     <section class="section" id="offerte">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="deals.eyebrow">// 04 — Offerte & Coupon</p>
+          <p class="eyebrow mono" data-i18n="deals.eyebrow">// 05 — Offerte & Coupon</p>
           <h2 data-i18n="deals.title">Strumenti che uso, a prezzo speciale</h2>
           <p class="section__sub" data-i18n="deals.sub">Codici sconto esclusivi per la community. Clicca sul codice per copiarlo.</p>
         </header>
@@ -298,7 +407,7 @@
     <section class="section section--alt" id="community">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono">// 05 — Community</p>
+          <p class="eyebrow mono">// 06 — Community</p>
           <h2 data-i18n="tg.title">Canali Telegram</h2>
           <p class="section__sub" data-i18n="tg.sub">Offerte su stampanti, filamenti e accessori, selezionate ogni giorno.</p>
         </header>
@@ -332,7 +441,7 @@
     <section class="section cta" id="contatti">
       <div class="container cta__inner reveal">
         <svg class="cta__logo" aria-hidden="true"><use href="#i-logo"/></svg>
-        <p class="eyebrow mono" data-i18n="cta.eyebrow">// 06 — Collaborazioni</p>
+        <p class="eyebrow mono" data-i18n="cta.eyebrow">// 07 — Collaborazioni</p>
         <h2 data-i18n="cta.title">Hai un prodotto per maker?<br><span class="grad">Parliamone.</span></h2>
         <p class="section__sub" data-i18n="cta.sub">Recensioni, sponsorizzazioni e progetti su misura per brand del settore stampa 3D, laser e utensili.</p>
         <a class="btn btn--primary btn--lg" href="mailto:3d.printall.contacts@gmail.com">3d.printall.contacts@gmail.com</a>

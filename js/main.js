@@ -164,6 +164,29 @@
       .observe(featureList);
   }
 
+  /* ---------- Quote composer: prepares an email, the site sends nothing ---------- */
+  const quoteSend = document.getElementById('quoteSend');
+  if (quoteSend) {
+    const chips = [...document.querySelectorAll('.quote .chip')];
+    let service = 'print';
+    chips.forEach(c => c.addEventListener('click', () => {
+      service = c.dataset.service;
+      chips.forEach(x => { x.classList.toggle('is-on', x === c); x.setAttribute('aria-pressed', x === c); });
+    }));
+    const SERVICE_KEYS = { print: 'sv.optPrint', laser: 'sv.optLaser', both: 'sv.optBoth' };
+    quoteSend.addEventListener('click', () => {
+      const vars = {
+        service: t(SERVICE_KEYS[service]),
+        qty: document.getElementById('quoteQty').value,
+        file: t(document.getElementById('quoteFile').checked ? 'sv.yes' : 'sv.no'),
+        desc: document.getElementById('quoteDesc').value.trim() || '—',
+      };
+      const subject = encodeURIComponent(t('sv.mailSubject', vars));
+      const body = encodeURIComponent(t('sv.mailBody', vars));
+      window.location.href = `mailto:3d.printall.contacts@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
+
   /* ---------- Coupon copy ---------- */
   const toast = document.getElementById('toast');
   let toastTimer;
