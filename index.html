@@ -15,9 +15,8 @@
 
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -42,7 +41,7 @@
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Navigazione principale" data-i18n-attr="aria-label:nav.aria">
         <a href="#social">Social</a>
-        <a href="#app">App</a>
+        <a href="app/">App</a>
         <a href="#modelli" data-i18n="nav.models">Modelli 3D</a>
         <a href="#offerte" data-i18n="nav.deals">Offerte</a>
         <a href="#community">Community</a>
@@ -175,114 +174,27 @@
       </div>
     </section>
 
-    <!-- ============ APP ============ -->
+    <!-- ============ APP (teaser — full page in app/) ============ -->
     <section class="section app" id="app">
       <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="app.eyebrow">// 02 — La mia app</p>
-          <h2 data-i18n="app.title">Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
-          <p class="section__sub" data-i18n="app.sub">
-            <strong>3D Cost Estimation</strong> calcola il prezzo di ogni stampa 3D, FDM o resina,
-            tenendo conto di materiale, energia, ammortamento della stampante e ore di progettazione.
-            E tiene d'occhio quanto filamento ti resta su ogni bobina.
-          </p>
-        </header>
-
-        <div class="app__grid">
-          <!-- Feature tabs -->
-          <ol class="app__features" role="tablist" aria-label="Funzioni dell'app" data-i18n-attr="aria-label:app.aria">
-            <li>
-              <button class="feature is-active" role="tab" aria-selected="true" data-shot="0" type="button">
-                <span class="feature__num mono">01</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f1t">Preventivo in pochi secondi</strong>
-                  <span data-i18n="app.f1d">Inserisci ore di stampa, grammi e stampante: l'app ti dà il prezzo da proporre e i costi reali.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-            <li>
-              <button class="feature" role="tab" aria-selected="false" data-shot="1" type="button">
-                <span class="feature__num mono">02</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f2t">Stampe multicolore</strong>
-                  <span data-i18n="app.f2d">Fino a 4 filamenti diversi nella stessa stampa, ognuno con il suo prezzo al kg.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-            <li>
-              <button class="feature" role="tab" aria-selected="false" data-shot="2" type="button">
-                <span class="feature__num mono">03</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f3t">Il tuo magazzino filamenti</strong>
-                  <span data-i18n="app.f3d">Salva fino a 40 bobine e vedi a colpo d'occhio quanti grammi restano su ciascuna.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-            <li>
-              <button class="feature" role="tab" aria-selected="false" data-shot="3" type="button">
-                <span class="feature__num mono">04</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f4t">Scorte sempre aggiornate</strong>
-                  <span data-i18n="app.f4d">Dopo ogni stampa le quantità si aggiornano da sole, e l'app ti avvisa se una bobina non basta.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-            <li>
-              <button class="feature" role="tab" aria-selected="false" data-shot="4" type="button">
-                <span class="feature__num mono">05</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f5t">Storico e preventivi PDF</strong>
-                  <span data-i18n="app.f5d">Ritrova ogni preventivo e scaricalo in PDF, pronto da inviare al cliente.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-            <li>
-              <button class="feature" role="tab" aria-selected="false" data-shot="5" type="button">
-                <span class="feature__num mono">06</span>
-                <span class="feature__body">
-                  <strong data-i18n="app.f6t">Su misura per te</strong>
-                  <span data-i18n="app.f6d">Italiano o inglese, euro o dollari, costo dell'energia, tariffa oraria e ammortamento.</span>
-                </span>
-                <span class="feature__bar"></span>
-              </button>
-            </li>
-          </ol>
-
-          <!-- Phone mockup -->
-          <div class="app__stage reveal">
-            <div class="app__glow" aria-hidden="true"></div>
-            <div class="phone">
-              <div class="phone__notch" aria-hidden="true"></div>
-              <div class="phone__screen">
-                <img class="is-active" src="assets/app/price.webp" alt="Schermata di stima del costo con prezzo stimato di 18,80 €" data-i18n-attr="alt:app.alt1" width="540" height="1126">
-                <img src="assets/app/multi.webp" alt="Stima con due filamenti diversi nella stessa stampa" data-i18n-attr="alt:app.alt2" width="540" height="1131" loading="lazy">
-                <img src="assets/app/filaments.webp" alt="Elenco dei filamenti salvati con i grammi rimanenti" data-i18n-attr="alt:app.alt3" width="540" height="1131" loading="lazy">
-                <img src="assets/app/stock.webp" alt="Riepilogo delle quantità aggiornate dopo la stampa" data-i18n-attr="alt:app.alt4" width="540" height="1131" loading="lazy">
-                <img src="assets/app/quote.webp" alt="Dettaglio di un preventivo con pulsante per scaricare il PDF" data-i18n-attr="alt:app.alt5" width="540" height="1131" loading="lazy">
-                <img src="assets/app/settings.webp" alt="Impostazioni: lingua, valuta, costo energia e tariffa di progettazione" data-i18n-attr="alt:app.alt6" width="540" height="1128" loading="lazy">
-              </div>
+        <div class="teaser">
+          <div class="teaser__copy reveal">
+            <p class="eyebrow mono" data-i18n="app.eyebrow">// 02 — La mia app</p>
+            <h2 data-i18n="app.title">Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
+            <p class="section__sub" data-i18n="teaser.sub"><strong>3D Cost Estimation</strong> calcola prezzo e costi di ogni stampa 3D, FDM o resina, e tiene d'occhio quanto filamento ti resta su ogni bobina.</p>
+            <div class="teaser__cta">
+              <a class="btn btn--primary" href="app/" data-i18n="teaser.btn">Scopri l'app →</a>
+              <a class="play-btn play-btn--sm" href="https://play.google.com/store/apps/details?id=my_pkg.myapp" target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true"><use href="#i-googleplay"/></svg>
+                <span><small data-i18n="app.available">Disponibile su</small>Google Play</span>
+              </a>
             </div>
-            <div class="app__chip app__chip--a mono" aria-hidden="true"><span class="dot"></span> 18.80 €</div>
-            <div class="app__chip app__chip--b mono" aria-hidden="true">PLA · −58g</div>
           </div>
-        </div>
-
-        <div class="app__cta reveal">
-          <a class="play-btn" href="https://play.google.com/store/apps/details?id=my_pkg.myapp" target="_blank" rel="noopener">
-            <svg class="ico" aria-hidden="true"><use href="#i-googleplay"/></svg>
-            <span><small data-i18n="app.available">Disponibile su</small>Google Play</span>
+          <a class="teaser__phones reveal" href="app/" aria-label="3D Cost Estimation" tabindex="-1">
+            <span class="app__glow" aria-hidden="true"></span>
+            <span class="phone phone--back"><span class="phone__screen"><img src="assets/app/filaments.webp" alt="" width="540" height="1131" loading="lazy"></span></span>
+            <span class="phone phone--front"><span class="phone__notch" aria-hidden="true"></span><span class="phone__screen"><img src="assets/app/price.webp" alt="" width="540" height="1126" loading="lazy"></span></span>
           </a>
-          <ul class="app__tags">
-            <li data-i18n="app.free">Gratis</li>
-            <li data-i18n="app.fdm">FDM &amp; resina</li>
-            <li>IT · EN</li>
-            <li>€ · $</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -366,7 +278,7 @@
             <svg class="ico deal__appicon" aria-hidden="true"><use href="#i-googleplay"/></svg>
             <h3 data-i18n="deals.appTitle">App: Costo di stampa 3D</h3>
             <p data-i18n="deals.appText">Calcola il costo reale di ogni stampa. Gratis su Android.</p>
-            <a class="btn btn--primary btn--sm" href="#app" data-i18n="deals.appBtn">Scopri l'app</a>
+            <a class="btn btn--primary btn--sm" href="app/" data-i18n="deals.appBtn">Scopri l'app</a>
           </article>
         </div>
         <p class="disclaimer" data-i18n="deals.disclaimer">Alcuni link sono affiliati: acquistando tramite questi link supporti il canale, senza costi aggiuntivi per te.</p>
@@ -434,6 +346,7 @@
       <div class="footer__legal">
         <p class="footer__copy mono">© <span id="year"></span> 3D PrintAll · Made layer by layer</p>
         <p class="footer__copy mono" data-i18n="footer.vat">Bartiromo Giuseppe · P.IVA 02753640032</p>
+        <p class="footer__copy mono"><a href="https://renwo.github.io/3dprintall-legal/website/" target="_blank" rel="noopener">Privacy policy</a></p>
       </div>
     </div>
   </footer>

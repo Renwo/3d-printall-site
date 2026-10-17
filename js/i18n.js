@@ -92,7 +92,59 @@
       "js.copied": "Copied!",
       "js.toast": "Code {code} copied ✓",
       "js.done": "COMPLETE ✓",
-      "js.gear": "gear.gcode"
+      "js.gear": "gear.gcode",
+      "teaser.sub": "<strong>3D Cost Estimation</strong> works out the price and costs of every 3D print, FDM or resin, and keeps track of how much filament is left on every spool.",
+      "teaser.btn": "Discover the app →",
+      "ap.metaTitle": "3D Cost Estimation — Calculate the cost of your 3D prints",
+      "ap.metaDesc": "3D Cost Estimation: the free Android app to calculate the cost and price of every 3D print, FDM or resin, manage your filament spools and create PDF quotes.",
+      "ap.eyebrow": "<span class=\"dot\"></span> Android app · Free",
+      "ap.lead": "The app that tells you what every 3D print really costs and how much to charge for it. Material, energy, depreciation and design in a single calculation, plus your spool inventory, always up to date.",
+      "ap.how": "How it works ↓",
+      "ap.tagPdf": "PDF quotes",
+      "ap.altHome": "Main screen of the 3D Cost Estimation app",
+      "ap.n1": "Filaments per print",
+      "ap.n2": "Spools in your inventory",
+      "ap.n3": "Technologies: FDM and resin",
+      "ap.n4": "Personal data collected",
+      "ap.howEyebrow": "// 01 — How it works",
+      "ap.howTitle": "From file to quote in three steps",
+      "ap.s1t": "Set up once",
+      "ap.s1d": "Add your printers, filaments and resins, then set energy cost, hourly design rate and depreciation.",
+      "ap.s2t": "Enter the print",
+      "ap.s2d": "Print hours, grams of material, number of parts and any design hours: you already have them in your slicer.",
+      "ap.s3t": "Get the price",
+      "ap.s3d": "The app works out price and costs, saves the quote in your history and exports it as a PDF. Your spools update automatically.",
+      "ap.featEyebrow": "// 02 — Features",
+      "ap.costEyebrow": "// 03 — The calculation",
+      "ap.costTitle": "Everything that goes into the price",
+      "ap.costSub": "Not just filament: the app accounts for every cost, so you never work at a loss.",
+      "ap.c1t": "Material",
+      "ap.c1d": "Grams used and price per kg of every spool or resin, even with multiple materials.",
+      "ap.c2t": "Energy",
+      "ap.c2d": "Your printer's average power draw, print hours and the kWh cost you set.",
+      "ap.c3t": "Depreciation",
+      "ap.c3d": "Machine wear, as an hourly cost for every hour of printing.",
+      "ap.c4t": "Design",
+      "ap.c4d": "The hours spent modelling or preparing the file, at your hourly rate.",
+      "ap.costNote": "The result is an estimate: use it as the basis for your quote.",
+      "ap.privTitle": "Your data stays on your phone",
+      "ap.privText": "No account, no tracking, no ads. Filaments, printers and quotes are saved only on your device.",
+      "ap.privLink": "App privacy policy",
+      "ap.privShort": "App privacy",
+      "ap.faqEyebrow": "// 04 — FAQ",
+      "ap.faqTitle": "Frequently asked questions",
+      "ap.q1": "Is the app free?",
+      "ap.a1": "Yes, you can download it for free from Google Play.",
+      "ap.q2": "Do I need to create an account?",
+      "ap.a2": "No. No sign-up is needed and all your data stays saved on your phone.",
+      "ap.q3": "Does it work with resin printers too?",
+      "ap.a3": "Yes: you can choose between FDM and resin and save your resins too. If you only print FDM, you can hide the resin section in the settings.",
+      "ap.q4": "Is the calculated price final?",
+      "ap.a4": "It's an estimate based on the parameters you enter. It's a great starting point for your quote, which you can then adapt to the customer.",
+      "ap.q5": "Can I use it in English or in dollars?",
+      "ap.a5": "Yes, in the settings you can choose Italian or English and euro or dollars.",
+      "ap.ctaTitle": "Stop <span class=\"grad\">guessing.</span>",
+      "ap.ctaSub": "Download 3D Cost Estimation and put together your next quote in seconds."
     }
   };
 
@@ -108,7 +160,13 @@
   // Remember the Italian markup so we can switch back without a reload
   const textEls = [...document.querySelectorAll('[data-i18n]')];
   const attrEls = [...document.querySelectorAll('[data-i18n-attr]')];
+  // Each page names its own title/description keys on <html>
+  const titleKey = document.documentElement.dataset.i18nTitle || 'meta.title';
+  const descKey = document.documentElement.dataset.i18nDesc || 'meta.desc';
+  const metaDesc = document.querySelector('meta[name="description"]');
   const italian = { ...STRINGS.it };
+  italian[titleKey] ??= document.title;
+  if (metaDesc) italian[descKey] ??= metaDesc.getAttribute('content');
   textEls.forEach(el => { italian[el.dataset.i18n] ??= el.innerHTML; });
   attrEls.forEach(el => el.dataset.i18nAttr.split(';').forEach(pair => {
     const [attr, key] = pair.split(':');
@@ -127,8 +185,8 @@
       const [attr, key] = pair.split(':');
       el.setAttribute(attr, t(key));
     }));
-    document.title = t('meta.title');
-    document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.desc'));
+    document.title = t(titleKey);
+    metaDesc?.setAttribute('content', t(descKey));
     document.querySelectorAll('.lang-switch button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
     document.querySelector('.lang-switch')?.setAttribute('data-active', lang);
     document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));

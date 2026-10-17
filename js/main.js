@@ -166,7 +166,7 @@
   const featureList = document.querySelector('.app__features');
   if (featureList) {
     const features = [...featureList.querySelectorAll('.feature')];
-    const shots = [...document.querySelectorAll('.phone__screen img')];
+    const shots = [...featureList.closest('.app__grid').querySelectorAll('.phone__screen img')];
     const DUR = 5000;
     let active = 0, timer, paused = false, inView = false;
     featureList.style.setProperty('--dur', `${DUR}ms`);
