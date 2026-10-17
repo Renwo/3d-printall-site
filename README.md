@@ -10,8 +10,19 @@ Sito statico (HTML/CSS/JS puro, nessun build step) pubblicato con **GitHub Pages
 index.html        Pagina principale
 css/style.css     Stili e animazioni
 js/main.js        Interazioni (menu, contatori, animazione stampante, copia coupon)
+js/i18n.js        Lingua: rilevamento IT/EN, selettore e traduzioni inglesi
 assets/           Logo (SVG + PNG), immagine social
 ```
+
+## Lingue
+
+Il testo italiano sta in `index.html`; le traduzioni inglesi in `js/i18n.js`.
+Il sito è in italiano se il browser è impostato in italiano, altrimenti in inglese;
+il selettore IT/EN in alto salva la scelta nel browser del visitatore.
+
+Per aggiungere un testo traducibile:
+1. in `index.html` aggiungi `data-i18n="chiave"` all'elemento (o `data-i18n-attr="alt:chiave"` per un attributo);
+2. in `js/i18n.js` aggiungi `"chiave": "English text"` dentro `en`.
 
 ## Anteprima in locale
 

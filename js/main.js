@@ -1,6 +1,7 @@
 /* 3D PrintAll — interactions */
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const t = (key, vars) => (window.i18n ? window.i18n.t(key, vars) : key);
 
   /* ---------- Nav: scrolled state + mobile toggle ---------- */
   const nav = document.getElementById('nav');
@@ -75,7 +76,7 @@
           '<path d="M15 30 L69 30 L66 23 L18 23 Z M28 23 L28 6 Q33 3 38 6 L38 23 Z"/>'),
       },
       {
-        name: 'ingranaggio.gcode', f1: '#00d4ff', f2: '#0086b3',
+        nameKey: 'js.gear', f1: '#00d4ff', f2: '#0086b3',
         shape: svg('0 0 100 100',
           '<path fill-rule="evenodd" d="M41.5,14.9 44.6,6.3 55.4,6.3 58.5,14.9 61.7,15.8 68.7,9.9 78.0,15.3 76.4,24.3 78.7,26.6 87.7,25.0 93.1,34.3 87.2,41.3 88.1,44.5 96.7,47.6 96.7,58.4 88.1,61.5 87.2,64.7 93.1,71.7 87.7,81.0 78.7,79.4 76.4,81.7 78.0,90.7 68.7,96.1 61.7,90.2 58.5,91.1 55.4,99.7 44.6,99.7 41.5,91.1 38.3,90.2 31.3,96.1 22.0,90.7 23.6,81.7 21.3,79.4 12.3,81.0 6.9,71.7 12.8,64.7 11.9,61.5 3.3,58.4 3.3,47.6 11.9,44.5 12.8,41.3 6.9,34.3 12.3,25.0 21.3,26.6 23.6,24.3 22.0,15.3 31.3,9.9 38.3,15.8ZM39.0,53.0a11,11 0 1,0 22,0a11,11 0 1,0 -22,0ZM44.0,29.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM64.8,41.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM64.8,65.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM44.0,77.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM23.2,65.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0ZM23.2,41.0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0Z"/>'),
       },
@@ -92,20 +93,22 @@
       fill.style.webkitMaskImage = fill.style.maskImage = o.shape;
       fill.style.setProperty('--f1', o.f1);
       fill.style.setProperty('--f2', o.f2);
-      file.textContent = o.name;
+      file.textContent = o.nameKey ? t(o.nameKey) : o.name;
       current = i;
     };
 
+    document.addEventListener('langchange', () => current >= 0 && setObject(current));
+
     const t0 = performance.now();
     const frame = (now) => {
-      const t = reduceMotion ? PRINT : (now - t0) % LOOP;
+      const elapsed = reduceMotion ? PRINT : (now - t0) % LOOP;
       const i = reduceMotion ? 0 : Math.floor((now - t0) / LOOP) % OBJECTS.length;
       if (i !== current) setObject(i);
-      const p = Math.min(1, t / PRINT);
+      const p = Math.min(1, elapsed / PRINT);
       gantry.style.setProperty('--p', p);
       fill.style.clipPath = `inset(${(1 - p) * 100}% 0 0 0)`;
       const v = Math.floor(p * 100);
-      pct.textContent = p < 1 ? `${v}%` : 'COMPLETATO ✓';
+      pct.textContent = p < 1 ? `${v}%` : t('js.done');
       bar.style.width = `${v}%`;
       if (!reduceMotion) requestAnimationFrame(frame);
     };
@@ -214,9 +217,9 @@
       }
       const label = btn.querySelector('em');
       btn.classList.add('is-copied');
-      label.textContent = 'Copiato!';
-      showToast(`Codice ${code} copiato ✓`);
-      setTimeout(() => { btn.classList.remove('is-copied'); label.textContent = 'Copia'; }, 2000);
+      label.textContent = t('js.copied');
+      showToast(t('js.toast', { code }));
+      setTimeout(() => { btn.classList.remove('is-copied'); label.textContent = t('deals.copy'); }, 2000);
     });
   });
 

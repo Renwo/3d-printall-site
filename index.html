@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3D PrintAll — Stampa 3D &amp; Fai da te</title>
-  <meta name="description" content="3D PrintAll: stampa 3D, fai da te, recensioni, modelli gratuiti e offerte esclusive. Oltre 500.000 follower su Instagram, TikTok, YouTube e Facebook.">
+  <meta name="description" content="3D PrintAll: stampa 3D, incisione laser, elettronica e fai da te. Progetti, modelli da scaricare e offerte per maker. Oltre 500.000 follower su Instagram, TikTok, YouTube e Facebook.">
   <meta name="theme-color" content="#0a0c0f">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="3D PrintAll — Stampa 3D & Fai da te">
-  <meta property="og:description" content="Progetti, recensioni, modelli e offerte dal mondo della stampa 3D. Unisciti a oltre 500k maker.">
+  <meta property="og:description" content="Stampa 3D, incisione laser ed elettronica: progetti, modelli e offerte per maker. Unisciti a oltre 500k maker.">
   <meta property="og:image" content="assets/og-image.svg">
 
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -40,15 +40,19 @@
         <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
         <span class="logo__text">3D<b>PrintAll</b></span>
       </a>
-      <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
+      <nav class="nav__links" id="navLinks" aria-label="Navigazione principale" data-i18n-attr="aria-label:nav.aria">
         <a href="#social">Social</a>
         <a href="#app">App</a>
-        <a href="#modelli">Modelli 3D</a>
-        <a href="#offerte">Offerte</a>
+        <a href="#modelli" data-i18n="nav.models">Modelli 3D</a>
+        <a href="#offerte" data-i18n="nav.deals">Offerte</a>
         <a href="#community">Community</a>
-        <a href="#contatti" class="btn btn--sm btn--primary">Collabora</a>
+        <a href="#contatti" class="btn btn--sm btn--primary" data-i18n="nav.collab">Collabora</a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
+      <div class="lang-switch" role="group" aria-label="Lingua / Language" data-active="it">
+        <button type="button" data-lang="it" aria-pressed="true" lang="it">IT</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Apri menu" data-i18n-attr="aria-label:nav.menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span>
       </button>
     </div>
@@ -61,19 +65,19 @@
       <canvas class="hero__grid" id="heroGrid" aria-hidden="true"></canvas>
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="dot"></span> Stampa 3D · Fai da te · Maker</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow"><span class="dot"></span> Stampa 3D · Fai da te · Maker</p>
           <h1 class="hero__title">
-            <span class="layered" data-text="Diamo forma">Diamo forma</span><br>
-            <span class="layered layered--accent" data-text="alle idee.">alle idee.</span>
+            <span class="layered" data-text="Diamo forma" data-i18n="hero.t1">Diamo forma</span><br>
+            <span class="layered layered--accent" data-text="alle idee." data-i18n="hero.t2">alle idee.</span>
           </h1>
-          <p class="hero__lead">
-            Tutorial, recensioni di stampanti, progetti DIY e modelli da scaricare.
+          <p class="hero__lead" data-i18n="hero.lead">
+            Stampa 3D, incisione laser, elettronica e fai da te: progetti veri, dall'idea al pezzo finito.
             Ogni giorno, layer dopo layer, con una community di oltre
             <strong>500.000 maker</strong>.
           </p>
           <div class="hero__cta">
-            <a href="#social" class="btn btn--primary">Seguimi sui social</a>
-            <a href="#modelli" class="btn btn--ghost">Scarica i modelli →</a>
+            <a href="#social" class="btn btn--primary" data-i18n="hero.cta1">Seguimi sui social</a>
+            <a href="#modelli" class="btn btn--ghost" data-i18n="hero.cta2">Scarica i modelli →</a>
           </div>
           <ul class="hero__socials" aria-label="Social">
             <li><a href="https://instagram.com/3d_printall" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
@@ -104,7 +108,7 @@
         </div>
       </div>
 
-      <a href="#stats" class="scroll-hint" aria-label="Scorri giù"><span></span></a>
+      <a href="#stats" class="scroll-hint" aria-label="Scorri giù" data-i18n-attr="aria-label:hero.scroll"><span></span></a>
     </section>
 
     <!-- ============ STATS ============ -->
@@ -112,15 +116,15 @@
       <div class="container stats__grid">
         <div class="stat reveal">
           <span class="stat__num" data-count="500" data-suffix="k+">0</span>
-          <span class="stat__label">Follower totali</span>
+          <span class="stat__label" data-i18n="stats.followers">Follower totali</span>
         </div>
         <div class="stat reveal">
           <span class="stat__num" data-count="4">0</span>
-          <span class="stat__label">Piattaforme social</span>
+          <span class="stat__label" data-i18n="stats.platforms">Piattaforme social</span>
         </div>
         <div class="stat reveal">
           <span class="stat__num" data-count="2018" data-plain>0</span>
-          <span class="stat__label">Online dal</span>
+          <span class="stat__label" data-i18n="stats.since">Online dal</span>
         </div>
       </div>
     </section>
@@ -130,8 +134,8 @@
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow mono">// 01 — Social</p>
-          <h2>Dove trovarmi</h2>
-          <p class="section__sub">Contenuti nuovi ogni settimana. Scegli la tua piattaforma preferita.</p>
+          <h2 data-i18n="social.title">Dove trovarmi</h2>
+          <p class="section__sub" data-i18n="social.sub">Contenuti nuovi ogni settimana. Scegli la tua piattaforma preferita.</p>
         </header>
 
         <div class="social-grid">
@@ -175,9 +179,9 @@
     <section class="section app" id="app">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono">// 02 — La mia app</p>
-          <h2>Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
-          <p class="section__sub">
+          <p class="eyebrow mono" data-i18n="app.eyebrow">// 02 — La mia app</p>
+          <h2 data-i18n="app.title">Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
+          <p class="section__sub" data-i18n="app.sub">
             <strong>3D Cost Estimation</strong> calcola il prezzo di ogni stampa 3D, FDM o resina,
             tenendo conto di materiale, energia, ammortamento della stampante e ore di progettazione.
             E tiene d'occhio quanto filamento ti resta su ogni bobina.
@@ -186,13 +190,13 @@
 
         <div class="app__grid">
           <!-- Feature tabs -->
-          <ol class="app__features" role="tablist" aria-label="Funzioni dell'app">
+          <ol class="app__features" role="tablist" aria-label="Funzioni dell'app" data-i18n-attr="aria-label:app.aria">
             <li>
               <button class="feature is-active" role="tab" aria-selected="true" data-shot="0" type="button">
                 <span class="feature__num mono">01</span>
                 <span class="feature__body">
-                  <strong>Preventivo in pochi secondi</strong>
-                  <span>Inserisci ore di stampa, grammi e stampante: l'app ti dà il prezzo da proporre e i costi reali.</span>
+                  <strong data-i18n="app.f1t">Preventivo in pochi secondi</strong>
+                  <span data-i18n="app.f1d">Inserisci ore di stampa, grammi e stampante: l'app ti dà il prezzo da proporre e i costi reali.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -201,8 +205,8 @@
               <button class="feature" role="tab" aria-selected="false" data-shot="1" type="button">
                 <span class="feature__num mono">02</span>
                 <span class="feature__body">
-                  <strong>Stampe multicolore</strong>
-                  <span>Fino a 4 filamenti diversi nella stessa stampa, ognuno con il suo prezzo al kg.</span>
+                  <strong data-i18n="app.f2t">Stampe multicolore</strong>
+                  <span data-i18n="app.f2d">Fino a 4 filamenti diversi nella stessa stampa, ognuno con il suo prezzo al kg.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -211,8 +215,8 @@
               <button class="feature" role="tab" aria-selected="false" data-shot="2" type="button">
                 <span class="feature__num mono">03</span>
                 <span class="feature__body">
-                  <strong>Il tuo magazzino filamenti</strong>
-                  <span>Salva fino a 40 bobine e vedi a colpo d'occhio quanti grammi restano su ciascuna.</span>
+                  <strong data-i18n="app.f3t">Il tuo magazzino filamenti</strong>
+                  <span data-i18n="app.f3d">Salva fino a 40 bobine e vedi a colpo d'occhio quanti grammi restano su ciascuna.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -221,8 +225,8 @@
               <button class="feature" role="tab" aria-selected="false" data-shot="3" type="button">
                 <span class="feature__num mono">04</span>
                 <span class="feature__body">
-                  <strong>Scorte sempre aggiornate</strong>
-                  <span>Dopo ogni stampa le quantità si aggiornano da sole, e l'app ti avvisa se una bobina non basta.</span>
+                  <strong data-i18n="app.f4t">Scorte sempre aggiornate</strong>
+                  <span data-i18n="app.f4d">Dopo ogni stampa le quantità si aggiornano da sole, e l'app ti avvisa se una bobina non basta.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -231,8 +235,8 @@
               <button class="feature" role="tab" aria-selected="false" data-shot="4" type="button">
                 <span class="feature__num mono">05</span>
                 <span class="feature__body">
-                  <strong>Storico e preventivi PDF</strong>
-                  <span>Ritrova ogni preventivo e scaricalo in PDF, pronto da inviare al cliente.</span>
+                  <strong data-i18n="app.f5t">Storico e preventivi PDF</strong>
+                  <span data-i18n="app.f5d">Ritrova ogni preventivo e scaricalo in PDF, pronto da inviare al cliente.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -241,8 +245,8 @@
               <button class="feature" role="tab" aria-selected="false" data-shot="5" type="button">
                 <span class="feature__num mono">06</span>
                 <span class="feature__body">
-                  <strong>Su misura per te</strong>
-                  <span>Italiano o inglese, euro o dollari, costo dell'energia, tariffa oraria e ammortamento.</span>
+                  <strong data-i18n="app.f6t">Su misura per te</strong>
+                  <span data-i18n="app.f6d">Italiano o inglese, euro o dollari, costo dell'energia, tariffa oraria e ammortamento.</span>
                 </span>
                 <span class="feature__bar"></span>
               </button>
@@ -255,12 +259,12 @@
             <div class="phone">
               <div class="phone__notch" aria-hidden="true"></div>
               <div class="phone__screen">
-                <img class="is-active" src="assets/app/price.webp" alt="Schermata di stima del costo con prezzo stimato di 18,80 €" width="540" height="1126">
-                <img src="assets/app/multi.webp" alt="Stima con due filamenti diversi nella stessa stampa" width="540" height="1131" loading="lazy">
-                <img src="assets/app/filaments.webp" alt="Elenco dei filamenti salvati con i grammi rimanenti" width="540" height="1131" loading="lazy">
-                <img src="assets/app/stock.webp" alt="Riepilogo delle quantità aggiornate dopo la stampa" width="540" height="1131" loading="lazy">
-                <img src="assets/app/quote.webp" alt="Dettaglio di un preventivo con pulsante per scaricare il PDF" width="540" height="1131" loading="lazy">
-                <img src="assets/app/settings.webp" alt="Impostazioni: lingua, valuta, costo energia e tariffa di progettazione" width="540" height="1128" loading="lazy">
+                <img class="is-active" src="assets/app/price.webp" alt="Schermata di stima del costo con prezzo stimato di 18,80 €" data-i18n-attr="alt:app.alt1" width="540" height="1126">
+                <img src="assets/app/multi.webp" alt="Stima con due filamenti diversi nella stessa stampa" data-i18n-attr="alt:app.alt2" width="540" height="1131" loading="lazy">
+                <img src="assets/app/filaments.webp" alt="Elenco dei filamenti salvati con i grammi rimanenti" data-i18n-attr="alt:app.alt3" width="540" height="1131" loading="lazy">
+                <img src="assets/app/stock.webp" alt="Riepilogo delle quantità aggiornate dopo la stampa" data-i18n-attr="alt:app.alt4" width="540" height="1131" loading="lazy">
+                <img src="assets/app/quote.webp" alt="Dettaglio di un preventivo con pulsante per scaricare il PDF" data-i18n-attr="alt:app.alt5" width="540" height="1131" loading="lazy">
+                <img src="assets/app/settings.webp" alt="Impostazioni: lingua, valuta, costo energia e tariffa di progettazione" data-i18n-attr="alt:app.alt6" width="540" height="1128" loading="lazy">
               </div>
             </div>
             <div class="app__chip app__chip--a mono" aria-hidden="true"><span class="dot"></span> 18.80 €</div>
@@ -271,11 +275,11 @@
         <div class="app__cta reveal">
           <a class="play-btn" href="https://play.google.com/store/apps/details?id=my_pkg.myapp" target="_blank" rel="noopener">
             <svg class="ico" aria-hidden="true"><use href="#i-googleplay"/></svg>
-            <span><small>Disponibile su</small>Google Play</span>
+            <span><small data-i18n="app.available">Disponibile su</small>Google Play</span>
           </a>
           <ul class="app__tags">
-            <li>Gratis</li>
-            <li>FDM &amp; resina</li>
+            <li data-i18n="app.free">Gratis</li>
+            <li data-i18n="app.fdm">FDM &amp; resina</li>
             <li>IT · EN</li>
             <li>€ · $</li>
           </ul>
@@ -287,29 +291,29 @@
     <section class="section section--alt" id="modelli">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono">// 03 — Modelli 3D</p>
-          <h2>I miei modelli, pronti da stampare</h2>
-          <p class="section__sub">Scarica i file STL / 3MF dalle principali piattaforme.</p>
+          <p class="eyebrow mono" data-i18n="models.eyebrow">// 03 — Modelli 3D</p>
+          <h2 data-i18n="models.title">I miei modelli, pronti da stampare</h2>
+          <p class="section__sub" data-i18n="models.sub">Scarica i file STL / 3MF dalle principali piattaforme.</p>
         </header>
 
         <div class="model-grid">
           <a class="model-card reveal" href="https://makerworld.com/en/@3d_printall" target="_blank" rel="noopener">
             <div class="model-card__visual"><div class="cube"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
             <h3>MakerWorld</h3>
-            <p>La mia pagina su MakerWorld, con profili di stampa ottimizzati.</p>
-            <span class="link">Visita la pagina →</span>
+            <p data-i18n="models.mw">La mia pagina su MakerWorld, con profili di stampa ottimizzati.</p>
+            <span class="link" data-i18n="models.visit">Visita la pagina →</span>
           </a>
           <a class="model-card reveal" href="https://cults3d.com/en/users/3dprintall" target="_blank" rel="noopener">
             <div class="model-card__visual"><div class="cube cube--b"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
             <h3>Cults3D</h3>
-            <p>Collezione di modelli originali, gratuiti e premium.</p>
-            <span class="link">Visita la pagina →</span>
+            <p data-i18n="models.cults">Collezione di modelli originali, gratuiti e premium.</p>
+            <span class="link" data-i18n="models.visit">Visita la pagina →</span>
           </a>
           <a class="model-card reveal" href="https://www.nexprint.com/en/U0035322098/home" target="_blank" rel="noopener">
             <div class="model-card__visual"><div class="cube cube--c"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
             <h3>Nexprint</h3>
-            <p>I miei progetti anche su Nexprint.</p>
-            <span class="link">Visita la pagina →</span>
+            <p data-i18n="models.nex">I miei progetti anche su Nexprint.</p>
+            <span class="link" data-i18n="models.visit">Visita la pagina →</span>
           </a>
         </div>
       </div>
@@ -319,53 +323,53 @@
     <section class="section" id="offerte">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono">// 04 — Offerte & Coupon</p>
-          <h2>Strumenti che uso, a prezzo speciale</h2>
-          <p class="section__sub">Codici sconto esclusivi per la community. Clicca sul codice per copiarlo.</p>
+          <p class="eyebrow mono" data-i18n="deals.eyebrow">// 04 — Offerte & Coupon</p>
+          <h2 data-i18n="deals.title">Strumenti che uso, a prezzo speciale</h2>
+          <p class="section__sub" data-i18n="deals.sub">Codici sconto esclusivi per la community. Clicca sul codice per copiarlo.</p>
         </header>
 
         <div class="deal-grid">
           <article class="deal reveal">
             <span class="deal__tag">-15%</span>
             <h3>HOTO Tools</h3>
-            <p>Utensili elettrici smart dal design curato.</p>
-            <button class="coupon" data-code="3DP15" type="button"><span class="mono">3DP15</span><em>Copia</em></button>
-            <a class="btn btn--ghost btn--sm" href="https://hototools.com/?ref=kghfpxga&amp;utm_source=goaff_ref" target="_blank" rel="noopener sponsored">Vai allo shop</a>
+            <p data-i18n="deals.hoto">Utensili elettrici smart dal design curato.</p>
+            <button class="coupon" data-code="3DP15" type="button"><span class="mono">3DP15</span><em data-i18n="deals.copy">Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://hototools.com/?ref=kghfpxga&amp;utm_source=goaff_ref" target="_blank" rel="noopener sponsored" data-i18n="deals.shop">Vai allo shop</a>
           </article>
           <article class="deal reveal">
             <span class="deal__tag">-5%</span>
             <h3>LaserPecker</h3>
-            <p>Incisori laser portatili per i tuoi progetti.</p>
-            <button class="coupon" data-code="3DP10" type="button"><span class="mono">3DP10</span><em>Copia</em></button>
-            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rkAULL" target="_blank" rel="noopener sponsored">Vai allo shop</a>
+            <p data-i18n="deals.lp">Incisori laser portatili per i tuoi progetti.</p>
+            <button class="coupon" data-code="3DP10" type="button"><span class="mono">3DP10</span><em data-i18n="deals.copy">Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rkAULL" target="_blank" rel="noopener sponsored" data-i18n="deals.shop">Vai allo shop</a>
           </article>
           <article class="deal reveal">
             <span class="deal__tag">AI</span>
             <h3>Tripo Studio</h3>
-            <p>Genera modelli 3D con l'intelligenza artificiale.</p>
-            <button class="coupon" data-code="9WS3CH" type="button"><span class="mono">9WS3CH</span><em>Copia</em></button>
-            <a class="btn btn--ghost btn--sm" href="https://studio.tripo3d.ai/home?invite_code=9WS3CH&amp;utm_source=instagram&amp;utm_medium=kol&amp;utm_campaign=kol_3d_printall" target="_blank" rel="noopener sponsored">Prova Tripo</a>
+            <p data-i18n="deals.tripo">Genera modelli 3D con l'intelligenza artificiale.</p>
+            <button class="coupon" data-code="9WS3CH" type="button"><span class="mono">9WS3CH</span><em data-i18n="deals.copy">Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://studio.tripo3d.ai/home?invite_code=9WS3CH&amp;utm_source=instagram&amp;utm_medium=kol&amp;utm_campaign=kol_3d_printall" target="_blank" rel="noopener sponsored" data-i18n="deals.tryTripo">Prova Tripo</a>
           </article>
           <article class="deal reveal">
             <span class="deal__tag">NEW</span>
             <h3>Elegoo Centauri Carbon 2</h3>
-            <p>Combo con sistema multicolore.</p>
-            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rD0Ovi" target="_blank" rel="noopener sponsored">Scopri l'offerta</a>
+            <p data-i18n="deals.elegoo">Combo con sistema multicolore.</p>
+            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rD0Ovi" target="_blank" rel="noopener sponsored" data-i18n="deals.see">Scopri l'offerta</a>
           </article>
           <article class="deal reveal">
             <span class="deal__tag">NEW</span>
             <h3>Snapmaker U1</h3>
-            <p>Stampante 3D multicolore con cambio utensile.</p>
-            <a class="btn btn--ghost btn--sm" href="https://snapmaker.sjv.io/c/3622600/1346054/16240" target="_blank" rel="noopener sponsored">Scopri l'offerta</a>
+            <p data-i18n="deals.snap">Stampante 3D multicolore con cambio utensile.</p>
+            <a class="btn btn--ghost btn--sm" href="https://snapmaker.sjv.io/c/3622600/1346054/16240" target="_blank" rel="noopener sponsored" data-i18n="deals.see">Scopri l'offerta</a>
           </article>
           <article class="deal deal--app reveal">
             <svg class="ico deal__appicon" aria-hidden="true"><use href="#i-googleplay"/></svg>
-            <h3>App: Costo di stampa 3D</h3>
-            <p>Calcola il costo reale di ogni stampa. Gratis su Android.</p>
-            <a class="btn btn--primary btn--sm" href="#app">Scopri l'app</a>
+            <h3 data-i18n="deals.appTitle">App: Costo di stampa 3D</h3>
+            <p data-i18n="deals.appText">Calcola il costo reale di ogni stampa. Gratis su Android.</p>
+            <a class="btn btn--primary btn--sm" href="#app" data-i18n="deals.appBtn">Scopri l'app</a>
           </article>
         </div>
-        <p class="disclaimer">Alcuni link sono affiliati: acquistando tramite questi link supporti il canale, senza costi aggiuntivi per te.</p>
+        <p class="disclaimer" data-i18n="deals.disclaimer">Alcuni link sono affiliati: acquistando tramite questi link supporti il canale, senza costi aggiuntivi per te.</p>
       </div>
     </section>
 
@@ -374,19 +378,19 @@
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow mono">// 05 — Community</p>
-          <h2>Canali Telegram</h2>
-          <p class="section__sub">Offerte su stampanti, filamenti e accessori, selezionate ogni giorno.</p>
+          <h2 data-i18n="tg.title">Canali Telegram</h2>
+          <p class="section__sub" data-i18n="tg.sub">Offerte su stampanti, filamenti e accessori, selezionate ogni giorno.</p>
         </header>
 
         <div class="tg-grid">
           <a class="tg reveal" href="http://t.me/scontistampa3d" target="_blank" rel="noopener">
             <span class="tg__flag">🇮🇹</span>
-            <div><h3>Offerte Stampa 3D</h3><p>Canale offerte in italiano</p></div>
+            <div><h3>Offerte Stampa 3D</h3><p data-i18n="tg.itDesc">Canale offerte in italiano</p></div>
             <svg class="ico tg__icon" aria-hidden="true"><use href="#i-telegram"/></svg>
           </a>
           <a class="tg reveal" href="https://t.me/joinchat/Ly3OJ7kNkNE4MzFk" target="_blank" rel="noopener">
             <span class="tg__flag">💬</span>
-            <div><h3>Gruppo chat IT</h3><p>Domande, consigli e confronto</p></div>
+            <div><h3 data-i18n="tg.chat">Gruppo chat IT</h3><p data-i18n="tg.chatDesc">Domande, consigli e confronto</p></div>
             <svg class="ico tg__icon" aria-hidden="true"><use href="#i-telegram"/></svg>
           </a>
           <a class="tg reveal" href="https://t.me/impresion3Ddescuento" target="_blank" rel="noopener">
@@ -407,9 +411,9 @@
     <section class="section cta" id="contatti">
       <div class="container cta__inner reveal">
         <svg class="cta__logo" aria-hidden="true"><use href="#i-logo"/></svg>
-        <p class="eyebrow mono">// 06 — Collaborazioni</p>
-        <h2>Hai un prodotto per maker?<br><span class="grad">Parliamone.</span></h2>
-        <p class="section__sub">Recensioni, sponsorizzazioni e progetti su misura per brand del settore stampa 3D, laser e utensili.</p>
+        <p class="eyebrow mono" data-i18n="cta.eyebrow">// 06 — Collaborazioni</p>
+        <h2 data-i18n="cta.title">Hai un prodotto per maker?<br><span class="grad">Parliamone.</span></h2>
+        <p class="section__sub" data-i18n="cta.sub">Recensioni, sponsorizzazioni e progetti su misura per brand del settore stampa 3D, laser e utensili.</p>
         <a class="btn btn--primary btn--lg" href="mailto:3d.printall.contacts@gmail.com">3d.printall.contacts@gmail.com</a>
       </div>
     </section>
@@ -417,7 +421,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="#top" class="logo" aria-label="3D PrintAll - torna su">
+      <a href="#top" class="logo" aria-label="3D PrintAll - torna su" data-i18n-attr="aria-label:footer.top">
         <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
         <span class="logo__text">3D<b>PrintAll</b></span>
       </a>
@@ -429,12 +433,13 @@
       </ul>
       <div class="footer__legal">
         <p class="footer__copy mono">© <span id="year"></span> 3D PrintAll · Made layer by layer</p>
-        <p class="footer__copy mono">Bartiromo Giuseppe · P.IVA 02753640032</p>
+        <p class="footer__copy mono" data-i18n="footer.vat">Bartiromo Giuseppe · P.IVA 02753640032</p>
       </div>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
