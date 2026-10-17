@@ -180,7 +180,7 @@
       "sv.s3t": "I make it",
       "sv.s3d": "Printing or engraving, with a final check of the part.",
       "sv.s4t": "You receive it",
-      "sv.s4d": "Shipping across Italy and Europe, or pick-up.",
+      "sv.s4d": "I ship it to your door, across Italy and Europe.",
       "sv.qTitle": "Request a quote",
       "sv.qText": "Pick the service and describe what you need: I'll draft the email, you just send it from your email app.",
       "sv.qService": "Service",
