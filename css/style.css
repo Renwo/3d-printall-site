@@ -437,6 +437,7 @@ p { margin: 0; }
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--border); padding: 2.5rem 0; }
 .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.footer__legal { text-align: right; display: grid; gap: .2rem; }
 .footer__copy { color: var(--muted); font-size: .85rem; }
 
 /* ---------- Toast ---------- */
@@ -489,6 +490,7 @@ p { margin: 0; }
   .social-card { min-height: 0; }
   .hero__cta .btn { flex: 1 1 100%; }
   .footer__inner { flex-direction: column; text-align: center; }
+  .footer__legal { text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
