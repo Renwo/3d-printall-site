@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D PrintAll — Stampa 3D &amp; Fai da te</title>
+  <meta name="description" content="3D PrintAll: stampa 3D, fai da te, recensioni, modelli gratuiti e offerte esclusive. Oltre 500.000 follower su Instagram, TikTok, YouTube e Facebook.">
+  <meta name="theme-color" content="#0b0d12">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3D PrintAll — Stampa 3D & Fai da te">
+  <meta property="og:description" content="Progetti, recensioni, modelli e offerte dal mondo della stampa 3D. Unisciti a oltre 500k maker.">
+  <meta property="og:image" content="assets/og-image.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="3D PrintAll - home">
+        <span class="logo__mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="logo__text">3D<b>PrintAll</b></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
+        <a href="#social">Social</a>
+        <a href="#modelli">Modelli 3D</a>
+        <a href="#offerte">Offerte</a>
+        <a href="#community">Community</a>
+        <a href="#contatti" class="btn btn--sm btn--primary">Collabora</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="hero__grid" id="heroGrid" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="dot"></span> Stampa 3D · Fai da te · Maker</p>
+          <h1 class="hero__title">
+            <span class="layered" data-text="Diamo forma">Diamo forma</span><br>
+            <span class="layered layered--accent" data-text="alle idee.">alle idee.</span>
+          </h1>
+          <p class="hero__lead">
+            Tutorial, recensioni di stampanti, progetti DIY e modelli da scaricare.
+            Ogni giorno, layer dopo layer, con una community di oltre
+            <strong>500.000 maker</strong>.
+          </p>
+          <div class="hero__cta">
+            <a href="#social" class="btn btn--primary">Seguimi sui social</a>
+            <a href="#modelli" class="btn btn--ghost">Scarica i modelli →</a>
+          </div>
+          <ul class="hero__socials" aria-label="Social">
+            <li><a href="https://instagram.com/3d_printall" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico ico--instagram"></i></a></li>
+            <li><a href="https://tiktok.com/@3d_printall" target="_blank" rel="noopener" aria-label="TikTok"><i class="ico ico--tiktok"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCyTCmtg6hml9MblgfYUGZMQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico ico--youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/trediprintall" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico ico--facebook"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Animated 3D printer -->
+        <div class="printer" aria-hidden="true">
+          <div class="printer__frame">
+            <div class="printer__gantry">
+              <div class="printer__head">
+                <span class="printer__nozzle"></span>
+              </div>
+            </div>
+            <div class="print">
+              <div class="print__fill"></div>
+            </div>
+            <div class="printer__bed"></div>
+          </div>
+          <div class="printer__label mono">
+            <span>PRINTING</span>
+            <span class="printer__pct" id="printPct">0%</span>
+          </div>
+          <div class="printer__bar"><span id="printBar"></span></div>
+        </div>
+      </div>
+
+      <a href="#stats" class="scroll-hint" aria-label="Scorri giù"><span></span></a>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" id="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="500" data-suffix="k+">0</span>
+          <span class="stat__label">Follower totali</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="4">0</span>
+          <span class="stat__label">Piattaforme social</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="3">0</span>
+          <span class="stat__label">Lingue (IT · ES · DE)</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2021" data-plain>0</span>
+          <span class="stat__label">Online dal</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOCIAL ============ -->
+    <section class="section" id="social">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow mono">// 01 — Social</p>
+          <h2>Dove trovarmi</h2>
+          <p class="section__sub">Contenuti nuovi ogni settimana. Scegli la tua piattaforma preferita.</p>
+        </header>
+
+        <div class="social-grid">
+          <a class="social-card reveal" style="--c1:#f58529;--c2:#dd2a7b;--c3:#8134af" href="https://instagram.com/3d_printall" target="_blank" rel="noopener">
+            <i class="ico ico--instagram social-card__icon"></i>
+            <div>
+              <h3>Instagram</h3>
+              <p class="mono">@3d_printall</p>
+            </div>
+            <span class="social-card__desc">Reel, progetti e novità dal laboratorio</span>
+            <span class="social-card__arrow">↗</span>
+          </a>
+          <a class="social-card reveal" style="--c1:#25f4ee;--c2:#111;--c3:#fe2c55" href="https://tiktok.com/@3d_printall" target="_blank" rel="noopener">
+            <i class="ico ico--tiktok social-card__icon"></i>
+            <div>
+              <h3>TikTok</h3>
+              <p class="mono">@3d_printall</p>
+            </div>
+            <span class="social-card__desc">Stampe in timelapse e idee in 60 secondi</span>
+            <span class="social-card__arrow">↗</span>
+          </a>
+          <a class="social-card reveal" style="--c1:#ff0000;--c2:#c4302b;--c3:#ff4d4d" href="https://www.youtube.com/channel/UCyTCmtg6hml9MblgfYUGZMQ" target="_blank" rel="noopener">
+            <i class="ico ico--youtube social-card__icon"></i>
+            <div>
+              <h3>YouTube</h3>
+              <p class="mono">3D PrintAll</p>
+            </div>
+            <span class="social-card__desc">Recensioni approfondite e tutorial</span>
+            <span class="social-card__arrow">↗</span>
+          </a>
+          <a class="social-card reveal" style="--c1:#1877f2;--c2:#0a52c2;--c3:#4f9bff" href="https://www.facebook.com/trediprintall" target="_blank" rel="noopener">
+            <i class="ico ico--facebook social-card__icon"></i>
+            <div>
+              <h3>Facebook</h3>
+              <p class="mono">trediprintall</p>
+            </div>
+            <span class="social-card__desc">Aggiornamenti e community</span>
+            <span class="social-card__arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODELLI ============ -->
+    <section class="section section--alt" id="modelli">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow mono">// 02 — Modelli 3D</p>
+          <h2>I miei modelli, pronti da stampare</h2>
+          <p class="section__sub">Scarica i file STL / 3MF dalle principali piattaforme.</p>
+        </header>
+
+        <div class="model-grid">
+          <a class="model-card reveal" href="https://makerworld.com/en/@3d_printall" target="_blank" rel="noopener">
+            <div class="model-card__visual"><div class="cube"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+            <h3>MakerWorld</h3>
+            <p>La mia pagina su MakerWorld, con profili di stampa ottimizzati.</p>
+            <span class="link">Visita la pagina →</span>
+          </a>
+          <a class="model-card reveal" href="https://cults3d.com/en/users/3dprintall" target="_blank" rel="noopener">
+            <div class="model-card__visual"><div class="cube cube--b"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+            <h3>Cults3D</h3>
+            <p>Collezione di modelli originali, gratuiti e premium.</p>
+            <span class="link">Visita la pagina →</span>
+          </a>
+          <a class="model-card reveal" href="https://www.nexprint.com/en/U0035322098/home" target="_blank" rel="noopener">
+            <div class="model-card__visual"><div class="cube cube--c"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+            <h3>Nexprint</h3>
+            <p>I miei progetti anche su Nexprint.</p>
+            <span class="link">Visita la pagina →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFFERTE ============ -->
+    <section class="section" id="offerte">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow mono">// 03 — Offerte & Coupon</p>
+          <h2>Strumenti che uso, a prezzo speciale</h2>
+          <p class="section__sub">Codici sconto esclusivi per la community. Clicca sul codice per copiarlo.</p>
+        </header>
+
+        <div class="deal-grid">
+          <article class="deal reveal">
+            <span class="deal__tag">-15%</span>
+            <h3>HOTO Tools</h3>
+            <p>Utensili elettrici smart dal design curato.</p>
+            <button class="coupon" data-code="3DP15" type="button"><span class="mono">3DP15</span><em>Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://hototools.com/?ref=kghfpxga&amp;utm_source=goaff_ref" target="_blank" rel="noopener sponsored">Vai allo shop</a>
+          </article>
+          <article class="deal reveal">
+            <span class="deal__tag">-5%</span>
+            <h3>LaserPecker</h3>
+            <p>Incisori laser portatili per i tuoi progetti.</p>
+            <button class="coupon" data-code="3DP10" type="button"><span class="mono">3DP10</span><em>Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rkAULL" target="_blank" rel="noopener sponsored">Vai allo shop</a>
+          </article>
+          <article class="deal reveal">
+            <span class="deal__tag">AI</span>
+            <h3>Tripo Studio</h3>
+            <p>Genera modelli 3D con l'intelligenza artificiale.</p>
+            <button class="coupon" data-code="9WS3CH" type="button"><span class="mono">9WS3CH</span><em>Copia</em></button>
+            <a class="btn btn--ghost btn--sm" href="https://studio.tripo3d.ai/home?invite_code=9WS3CH&amp;utm_source=instagram&amp;utm_medium=kol&amp;utm_campaign=kol_3d_printall" target="_blank" rel="noopener sponsored">Prova Tripo</a>
+          </article>
+          <article class="deal reveal">
+            <span class="deal__tag">NEW</span>
+            <h3>Elegoo Centauri Carbon 2</h3>
+            <p>Combo con sistema multicolore.</p>
+            <a class="btn btn--ghost btn--sm" href="https://tidd.ly/4rD0Ovi" target="_blank" rel="noopener sponsored">Scopri l'offerta</a>
+          </article>
+          <article class="deal reveal">
+            <span class="deal__tag">NEW</span>
+            <h3>Snapmaker U1</h3>
+            <p>Stampante 3D multicolore con cambio utensile.</p>
+            <a class="btn btn--ghost btn--sm" href="https://snapmaker.sjv.io/c/3622600/1346054/16240" target="_blank" rel="noopener sponsored">Scopri l'offerta</a>
+          </article>
+          <article class="deal deal--app reveal">
+            <i class="ico ico--googleplay deal__appicon"></i>
+            <h3>App: Costo di stampa 3D</h3>
+            <p>Calcola il costo reale di ogni stampa. Gratis su Android.</p>
+            <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=my_pkg.myapp" target="_blank" rel="noopener">Scarica da Google Play</a>
+          </article>
+        </div>
+        <p class="disclaimer">Alcuni link sono affiliati: acquistando tramite questi link supporti il canale, senza costi aggiuntivi per te.</p>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITY ============ -->
+    <section class="section section--alt" id="community">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow mono">// 04 — Community</p>
+          <h2>Canali Telegram</h2>
+          <p class="section__sub">Offerte su stampanti, filamenti e accessori, selezionate ogni giorno.</p>
+        </header>
+
+        <div class="tg-grid">
+          <a class="tg reveal" href="http://t.me/scontistampa3d" target="_blank" rel="noopener">
+            <span class="tg__flag">🇮🇹</span>
+            <div><h3>Offerte Stampa 3D</h3><p>Canale offerte in italiano</p></div>
+            <i class="ico ico--telegram tg__icon"></i>
+          </a>
+          <a class="tg reveal" href="https://t.me/joinchat/Ly3OJ7kNkNE4MzFk" target="_blank" rel="noopener">
+            <span class="tg__flag">💬</span>
+            <div><h3>Gruppo chat IT</h3><p>Domande, consigli e confronto</p></div>
+            <i class="ico ico--telegram tg__icon"></i>
+          </a>
+          <a class="tg reveal" href="https://t.me/impresion3Ddescuento" target="_blank" rel="noopener">
+            <span class="tg__flag">🇪🇸</span>
+            <div><h3>Impresión 3D y bricolaje</h3><p>Descuentos en español</p></div>
+            <i class="ico ico--telegram tg__icon"></i>
+          </a>
+          <a class="tg reveal" href="https://t.me/DruckRabatte3D" target="_blank" rel="noopener">
+            <span class="tg__flag">🇩🇪</span>
+            <div><h3>3D-Druck-Angebote</h3><p>Amazon.de Angebote auf Deutsch</p></div>
+            <i class="ico ico--telegram tg__icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATTI ============ -->
+    <section class="section cta" id="contatti">
+      <div class="container cta__inner reveal">
+        <p class="eyebrow mono">// 05 — Collaborazioni</p>
+        <h2>Hai un prodotto per maker?<br><span class="grad">Parliamone.</span></h2>
+        <p class="section__sub">Recensioni, sponsorizzazioni e progetti su misura per brand del settore stampa 3D, laser e utensili.</p>
+        <a class="btn btn--primary btn--lg" href="mailto:3d.printall.contacts@gmail.com">3d.printall.contacts@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="logo__text">3D<b>PrintAll</b></span>
+      </a>
+      <ul class="hero__socials">
+        <li><a href="https://instagram.com/3d_printall" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico ico--instagram"></i></a></li>
+        <li><a href="https://tiktok.com/@3d_printall" target="_blank" rel="noopener" aria-label="TikTok"><i class="ico ico--tiktok"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCyTCmtg6hml9MblgfYUGZMQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico ico--youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/trediprintall" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico ico--facebook"></i></a></li>
+      </ul>
+      <p class="footer__copy mono">© <span id="year"></span> 3D PrintAll · Made layer by layer</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
