@@ -227,7 +227,7 @@ p { margin: 0; }
   background: linear-gradient(180deg, #4a5468, #2a3142);
   border-radius: 3px;
   /* top = nozzle-tip height; driven by js/main.js (p: 0 → 1) */
-  top: calc(90% - 54px - var(--p, 0) * 42%);
+  top: calc(90% - 54px - var(--p, 0) * 54%);
 }
 .printer__head {
   position: absolute; top: -18px; width: 54px; height: 44px;
@@ -259,7 +259,7 @@ p { margin: 0; }
 .print {
   position: absolute; left: 50%; transform: translateX(-50%);
   bottom: calc(10% + 8px);
-  width: 46%; height: 42%;
+  width: 50%; height: 54%;
 }
 /* Object silhouette (mask) is set by js/main.js; clip-path reveals it bottom-up */
 .print__fill {

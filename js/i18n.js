@@ -8,8 +8,7 @@
       "meta.desc": "3D PrintAll: stampa 3D, incisione laser, elettronica e fai da te. Progetti, modelli da scaricare e offerte per maker. Oltre 500.000 follower su Instagram, TikTok, YouTube e Facebook.",
       "js.copied": "Copiato!",
       "js.toast": "Codice {code} copiato ✓",
-      "js.done": "COMPLETATO ✓",
-      "js.gear": "ingranaggio.gcode"
+      "js.done": "COMPLETATO ✓"
     },
     "en": {
       "nav.models": "3D Models",
@@ -92,7 +91,6 @@
       "js.copied": "Copied!",
       "js.toast": "Code {code} copied ✓",
       "js.done": "COMPLETE ✓",
-      "js.gear": "gear.gcode",
       "teaser.sub": "<strong>3D Cost Estimation</strong> works out the price and costs of every 3D print, FDM or resin, and keeps track of how much filament is left on every spool.",
       "teaser.btn": "Discover the app →",
       "ap.metaTitle": "3D Cost Estimation — Calculate the cost of your 3D prints",
