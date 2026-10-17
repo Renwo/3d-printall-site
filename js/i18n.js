@@ -153,6 +153,8 @@
       "nav.services": "Services",
       "sv.eyebrow": "// 02 — Services",
       "sv.title": "Your project, <span class=\"grad\">made by me</span>",
+      "footer.terms": "Terms of sale",
+      "sv.terms": "Read the terms of sale",
       "sv.audience": "For individuals and businesses",
       "sv.sub": "The same machines and the same care you see in my videos, at the service of your idea: 3D printing and laser engraving on demand.",
       "sv.printTitle": "3D printing on demand",
