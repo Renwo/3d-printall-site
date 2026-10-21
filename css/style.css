@@ -307,6 +307,7 @@ p { margin: 0; }
 /* ---------- Sections ---------- */
 .section { padding: 120px 0; position: relative; }
 .section--alt { background: var(--bg-2); }
+.section--alt + .section--alt { border-top: 1px solid var(--border); }
 .section__head { max-width: 640px; margin-bottom: 3.5rem; }
 .section__head h2, .cta h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 1rem; }
 .section__sub { color: var(--muted); font-size: 1.1rem; }
