@@ -210,6 +210,23 @@
     });
   }
 
+  /* ---------- Copy email address ---------- */
+  const copyEmail = document.getElementById('copyEmail');
+  if (copyEmail) {
+    copyEmail.addEventListener('click', async () => {
+      const email = copyEmail.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch {
+        const ta = Object.assign(document.createElement('textarea'), { value: email });
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      copyEmail.classList.add('is-copied');
+      showToast(t('cta.copied'));
+      setTimeout(() => copyEmail.classList.remove('is-copied'), 2000);
+    });
+  }
+
   /* ---------- Coupon copy ---------- */
   const toast = document.getElementById('toast');
   let toastTimer;

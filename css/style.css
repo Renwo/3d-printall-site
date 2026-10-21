@@ -836,6 +836,19 @@ a.chip { display: inline-block; }
 .faq details p { padding: 0 1.4rem 1.2rem; color: var(--muted); }
 
 .cta .play-btn { margin-top: .5rem; }
+.cta__mail { display: flex; align-items: center; justify-content: center; gap: .75rem; flex-wrap: wrap; }
+.copy-btn {
+  position: relative; display: grid; place-items: center; width: 58px; height: 58px; flex-shrink: 0;
+  border-radius: 50%; cursor: pointer; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border);
+  transition: color .25s, border-color .25s, transform .25s, background .25s;
+}
+.copy-btn:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.copy-btn svg { width: 22px; height: 22px; grid-area: 1 / 1; transition: opacity .25s, transform .25s; }
+.copy-btn__done { opacity: 0; transform: scale(.5); }
+.copy-btn.is-copied { color: var(--accent); border-color: var(--accent); background: rgba(45,255,96,.12); }
+.copy-btn.is-copied .copy-btn__icon { opacity: 0; transform: scale(.5); }
+.copy-btn.is-copied .copy-btn__done { opacity: 1; transform: none; }
 .footer__copy a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 .footer__copy a:hover { color: var(--accent); }
 
