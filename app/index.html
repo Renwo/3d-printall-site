@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3D Cost Estimation — Calcola il costo delle tue stampe 3D</title>
-  <meta name="description" content="3D Cost Estimation: l'app Android gratuita per calcolare il costo e il prezzo di ogni stampa 3D, FDM o resina, gestire le bobine di filamento e creare preventivi PDF.">
+  <meta name="description" content="3D Cost Estimation: l'app Android gratuita per calcolare il costo e il prezzo di ogni stampa 3D, FDM o resina, gestire le bobine di filamento, creare preventivi PDF con il tuo logo e tenere d'occhio ricavi e margini.">
   <meta name="theme-color" content="#0a0c0f">
 
   <meta property="og:type" content="website">
@@ -89,6 +89,8 @@
           <ul class="app__tags">
             <li data-i18n="app.fdm">FDM &amp; resina</li>
             <li data-i18n="ap.tagPdf">Preventivi PDF</li>
+            <li data-i18n="ap.tagStats">Statistiche</li>
+            <li>Backup</li>
             <li>IT · EN</li>
             <li>€ · $</li>
           </ul>
@@ -151,7 +153,7 @@
           <li class="step reveal">
             <span class="step__num mono">03</span>
             <h3 data-i18n="ap.s3t">Ottieni il prezzo</h3>
-            <p data-i18n="ap.s3d">L'app calcola prezzo e costi, salva il preventivo nello storico e lo esporta in PDF. Le bobine si aggiornano da sole.</p>
+            <p data-i18n="ap.s3d">L'app calcola prezzo e costi: salvi il preventivo nello storico e lo invii in PDF con il tuo logo. A lavoro completato le bobine si aggiornano da sole.</p>
           </li>
         </ol>
       </div>
@@ -185,11 +187,19 @@
               <span class="feature__bar"></span></button></li>
             <li><button class="feature" role="tab" aria-selected="false" type="button">
               <span class="feature__num mono">05</span>
-              <span class="feature__body"><strong data-i18n="app.f5t">Storico e preventivi PDF</strong><span data-i18n="app.f5d">Ritrova ogni preventivo e scaricalo in PDF, pronto da inviare al cliente.</span></span>
+              <span class="feature__body"><strong data-i18n="app.f5t">Storico e preventivi PDF</strong><span data-i18n="app.f5d">Ogni preventivo ha il suo numero progressivo, il cliente e le note: ritrovalo nello storico e scaricalo in PDF, pronto da inviare.</span></span>
               <span class="feature__bar"></span></button></li>
             <li><button class="feature" role="tab" aria-selected="false" type="button">
               <span class="feature__num mono">06</span>
-              <span class="feature__body"><strong data-i18n="app.f6t">Su misura per te</strong><span data-i18n="app.f6d">Italiano o inglese, euro o dollari, costo dell'energia, tariffa oraria e ammortamento.</span></span>
+              <span class="feature__body"><strong data-i18n="app.f7t">PDF con il tuo marchio</strong><span data-i18n="app.f7d">Logo, dati della tua attività, colore, validità e testo a fondo pagina: il preventivo parla per te.</span></span>
+              <span class="feature__bar"></span></button></li>
+            <li><button class="feature" role="tab" aria-selected="false" type="button">
+              <span class="feature__num mono">07</span>
+              <span class="feature__body"><strong data-i18n="app.f8t">Statistiche del tuo lavoro</strong><span data-i18n="app.f8d">Ricavi, margine, preventivi accettati, materiale usato e filamenti più usati, per mese o per anno.</span></span>
+              <span class="feature__bar"></span></button></li>
+            <li><button class="feature" role="tab" aria-selected="false" type="button">
+              <span class="feature__num mono">08</span>
+              <span class="feature__body"><strong data-i18n="app.f6t">Su misura per te</strong><span data-i18n="app.f6d">Italiano o inglese, euro o dollari, costo dell'energia, tariffa oraria e ammortamento. E con il backup porti tutti i dati su un nuovo telefono.</span></span>
               <span class="feature__bar"></span></button></li>
           </ol>
 
@@ -203,6 +213,8 @@
                 <img src="../assets/app/filaments.webp" alt="Elenco dei filamenti salvati con i grammi rimanenti" data-i18n-attr="alt:app.alt3" width="540" height="1131" loading="lazy">
                 <img src="../assets/app/stock.webp" alt="Riepilogo delle quantità aggiornate dopo la stampa" data-i18n-attr="alt:app.alt4" width="540" height="1131" loading="lazy">
                 <img src="../assets/app/quote.webp" alt="Dettaglio di un preventivo con pulsante per scaricare il PDF" data-i18n-attr="alt:app.alt5" width="540" height="1131" loading="lazy">
+                <img src="../assets/app/pdf-settings.webp" alt="Impostazioni del PDF: logo, dati dell'attività e colore" data-i18n-attr="alt:app.alt7" width="540" height="1131" loading="lazy">
+                <img src="../assets/app/stats.webp" alt="Statistiche: ricavi, margine, preventivi completati e indicatori di conversione e margine medio" data-i18n-attr="alt:app.alt8" width="540" height="1131" loading="lazy">
                 <img src="../assets/app/settings.webp" alt="Impostazioni: lingua, valuta, costo energia e tariffa di progettazione" data-i18n-attr="alt:app.alt6" width="540" height="1128" loading="lazy">
               </div>
             </div>
@@ -236,7 +248,7 @@
           <svg class="privacy-band__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           <div>
             <h2 data-i18n="ap.privTitle">I tuoi dati restano sul tuo telefono</h2>
-            <p data-i18n="ap.privText">Nessun account, nessun tracciamento, nessuna pubblicità. Filamenti, stampanti e preventivi sono salvati solo sul tuo dispositivo.</p>
+            <p data-i18n="ap.privText">Nessun account, nessun tracciamento, nessuna pubblicità. Filamenti, stampanti, preventivi e statistiche sono salvati solo sul tuo dispositivo, e il backup lo esporti tu, dove vuoi.</p>
           </div>
           <a class="btn btn--ghost btn--sm" href="https://renwo.github.io/3dprintall-legal/" target="_blank" rel="noopener" data-i18n="ap.privLink">Privacy policy dell'app</a>
         </div>
@@ -257,6 +269,9 @@
           <details class="reveal"><summary data-i18n="ap.q3">Funziona anche con le stampanti a resina?</summary><p data-i18n="ap.a3">Sì: puoi scegliere tra FDM e resina e salvare anche le tue resine. Se stampi solo FDM, puoi nascondere la sezione resina dalle impostazioni.</p></details>
           <details class="reveal"><summary data-i18n="ap.q4">Il prezzo calcolato è definitivo?</summary><p data-i18n="ap.a4">È una stima basata sui parametri che inserisci. È un ottimo punto di partenza per il tuo preventivo, che puoi poi adattare al cliente.</p></details>
           <details class="reveal"><summary data-i18n="ap.q5">Posso usarla in inglese o in dollari?</summary><p data-i18n="ap.a5">Sì, dalle impostazioni puoi scegliere italiano o inglese ed euro o dollari.</p></details>
+          <details class="reveal"><summary data-i18n="ap.q6">Posso mettere il mio logo sui preventivi?</summary><p data-i18n="ap.a6">Sì. In Impostazioni &gt; Dati attività e PDF aggiungi logo, nome, contatti e partita IVA, scegli il colore e la validità del preventivo e decidi quali dettagli mostrare al cliente.</p></details>
+          <details class="reveal"><summary data-i18n="ap.q7">Come funzionano le statistiche?</summary><p data-i18n="ap.a7">Contano i preventivi che nello storico segni come completati, nel mese in cui li completi: vedi ricavi, costi, margine, materiale e ore di stampa per il periodo che scegli.</p></details>
+          <details class="reveal"><summary data-i18n="ap.q8">Se cambio telefono perdo i dati?</summary><p data-i18n="ap.a8">No. Da Impostazioni &gt; Backup esporti tutti i dati in un file e lo importi sul nuovo telefono. Su Android i dati vengono salvati anche nel backup automatico di Google, se è attivo.</p></details>
         </div>
       </div>
     </section>
