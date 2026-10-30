@@ -253,6 +253,33 @@
     });
   });
 
+  /* ---------- App web: prova dal vivo nel telefono (solo desktop) ---------- */
+  // Su desktop l'app gira dentro la cornice del telefono nella sezione #prova;
+  // da smartphone i link portano alla pagina web/ a tutto schermo, usabile come
+  // un'app. L'app viene caricata solo al clic: pesa qualche MB e, finché non
+  // si sceglie di usarla, la rotellina scorre la pagina e non l'app.
+  const liveScreen = document.getElementById('liveScreen');
+  if (liveScreen) {
+    const isDesktop = window.matchMedia('(min-width: 861px)');
+    const startLiveApp = () => {
+      if (liveScreen.querySelector('iframe')) return;
+      const frame = Object.assign(document.createElement('iframe'), {
+        src: 'web/',
+        title: '3D Cost Estimation',
+        className: 'phone__app',
+      });
+      liveScreen.appendChild(frame);
+      liveScreen.classList.add('is-live');
+    };
+    document.getElementById('liveStart').addEventListener('click', startLiveApp);
+    document.querySelectorAll('[data-web-app]').forEach(link => link.addEventListener('click', (e) => {
+      if (!isDesktop.matches) return;
+      e.preventDefault();
+      liveScreen.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      startLiveApp();
+    }));
+  }
+
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

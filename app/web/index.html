@@ -1,0 +1,34 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>3D Cost Estimation</title><meta name="description" content="3D Cost Estimation nel browser: calcola il costo e il prezzo delle tue stampe 3D, gestisci le bobine e crea preventivi PDF. I dati restano nel tuo browser."><meta name="theme-color" content="#1F2430"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png" type="image/png"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="3D Cost"><meta name="apple-mobile-web-app-status-bar-style" content="black"><style>/* Font delle icone (react-native-vector-icons): sul web la libreria usa
+       come fontFamily il nome del file del font, senza estensione. */
+    @font-face { font-family: 'FontAwesome'; src: url(fonts/FontAwesome.ttf) format('truetype'); font-display: block; }
+    @font-face { font-family: 'FontAwesome5_Solid'; src: url(fonts/FontAwesome5_Solid.ttf) format('truetype'); font-display: block; }
+    @font-face { font-family: 'FontAwesome5_Regular'; src: url(fonts/FontAwesome5_Regular.ttf) format('truetype'); font-display: block; }
+    @font-face { font-family: 'FontAwesome5_Brands'; src: url(fonts/FontAwesome5_Brands.ttf) format('truetype'); font-display: block; }
+    @font-face { font-family: 'Fontisto'; src: url(fonts/Fontisto.ttf) format('truetype'); font-display: block; }
+    @font-face { font-family: 'MaterialCommunityIcons'; src: url(fonts/MaterialCommunityIcons.ttf) format('truetype'); font-display: block; }
+
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: #E6E9EF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overscroll-behavior: none;
+    }
+    /* L'app è pensata per il telefono: su schermi larghi resta una colonna
+       centrata, come uno smartphone. */
+    #root {
+      display: flex;
+      height: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background: #F7F8FA;
+      box-shadow: 0 0 40px rgba(31, 36, 48, 0.12);
+      overflow: hidden;
+    }
+    @media (max-width: 480px) { #root { box-shadow: none; } }
+    /* Chrome rende focalizzabili i contenitori scorrevoli e le finestre
+       modali di react-native-web danno il focus al primo: niente bordo su
+       questi, che non sono controlli. Pulsanti e campi (con role/tabindex o
+       input) mantengono il bordo di focus per la tastiera. */
+    div:not([tabindex]):not([role]):focus-visible { outline: none; }
+    noscript { display: block; padding: 24px; font-size: 15px; }</style><script defer="defer" src="./app.cffa60a5.js"></script></head><body><noscript>Per usare 3D Cost Estimation attiva JavaScript. / Enable JavaScript to use 3D Cost Estimation.</noscript><div id="root"></div></body></html>

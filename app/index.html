@@ -72,7 +72,7 @@
     <section class="hero hero--app">
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow" data-i18n="ap.eyebrow"><span class="dot"></span> App Android · Gratis</p>
+          <p class="eyebrow" data-i18n="ap.eyebrow"><span class="dot"></span> Android e browser · Gratis</p>
           <h1 class="hero__title hero__title--app">3D Cost <span class="grad">Estimation</span></h1>
           <p class="hero__lead" data-i18n="ap.lead">
             L'app che ti dice quanto costa davvero ogni stampa 3D e quanto farla pagare.
@@ -84,6 +84,7 @@
               <svg class="ico" aria-hidden="true"><use href="#i-googleplay"/></svg>
               <span><small data-i18n="app.available">Disponibile su</small>Google Play</span>
             </a>
+            <a href="web/" class="btn btn--primary" data-web-app data-i18n="ap.webBtn">Usala nel browser →</a>
             <a href="#come-funziona" class="btn btn--ghost" data-i18n="ap.how">Come funziona ↓</a>
           </div>
           <ul class="app__tags">
@@ -159,11 +160,43 @@
       </div>
     </section>
 
+    <!-- ============ TRY IT (desktop: app dal vivo nel telefono; smartphone: link all'app a tutto schermo) ============ -->
+    <section class="section section--alt" id="prova">
+      <div class="container try">
+        <div class="try__copy reveal">
+          <p class="eyebrow mono" data-i18n="ap.tryEyebrow">// 02 — Provala</p>
+          <h2 data-i18n="ap.tryTitle">Provala qui, <span class="grad">senza installare nulla</span></h2>
+          <p class="section__sub" data-i18n="ap.trySub">È l'app vera, con le stesse funzioni della versione Android: calcola un preventivo, salva i tuoi filamenti, scarica il PDF.</p>
+          <ul class="try__points">
+            <li data-i18n="ap.tryP1">I dati restano solo in questo browser, nessun account</li>
+            <li data-i18n="ap.tryP2">Il backup si importa anche nell'app Android, e viceversa</li>
+            <li data-i18n="ap.tryP3">Dallo smartphone si apre a tutto schermo, come un'app</li>
+          </ul>
+          <a class="btn btn--ghost btn--sm try__full" href="web/" target="_blank" rel="noopener" data-i18n="ap.tryFull">Apri a tutto schermo ↗</a>
+          <a class="btn btn--primary try__open" href="web/" data-i18n="ap.tryOpen">Apri l'app →</a>
+        </div>
+
+        <div class="app__stage try__stage reveal">
+          <div class="app__glow" aria-hidden="true"></div>
+          <div class="phone phone--live">
+            <div class="phone__notch" aria-hidden="true"></div>
+            <div class="phone__screen phone__screen--live" id="liveScreen">
+              <img class="is-active" src="../assets/app/home.webp" alt="" width="540" height="1131" loading="lazy">
+              <button type="button" class="try__start" id="liveStart">
+                <span class="try__play" aria-hidden="true">▶</span>
+                <span data-i18n="ap.tryStart">Prova l'app</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ FEATURES ============ -->
     <section class="section app" id="funzioni">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="ap.featEyebrow">// 02 — Funzioni</p>
+          <p class="eyebrow mono" data-i18n="ap.featEyebrow">// 03 — Funzioni</p>
           <h2 data-i18n="app.title">Quanto costa <span class="grad">davvero</span> la tua stampa?</h2>
         </header>
 
@@ -227,7 +260,7 @@
     <section class="section section--alt" id="calcolo">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="ap.costEyebrow">// 03 — Il calcolo</p>
+          <p class="eyebrow mono" data-i18n="ap.costEyebrow">// 04 — Il calcolo</p>
           <h2 data-i18n="ap.costTitle">Tutto quello che entra nel prezzo</h2>
           <p class="section__sub" data-i18n="ap.costSub">Non solo il filamento: l'app considera ogni voce di costo, così non lavori mai in perdita.</p>
         </header>
@@ -248,7 +281,7 @@
           <svg class="privacy-band__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           <div>
             <h2 data-i18n="ap.privTitle">I tuoi dati restano sul tuo telefono</h2>
-            <p data-i18n="ap.privText">Nessun account, nessun tracciamento, nessuna pubblicità. Filamenti, stampanti, preventivi e statistiche sono salvati solo sul tuo dispositivo, e il backup lo esporti tu, dove vuoi.</p>
+            <p data-i18n="ap.privText">Nessun account, nessun tracciamento, nessuna pubblicità. Filamenti, stampanti, preventivi e statistiche sono salvati solo sul tuo dispositivo (o nel tuo browser, con la versione web), e il backup lo esporti tu, dove vuoi.</p>
           </div>
           <a class="btn btn--ghost btn--sm" href="https://renwo.github.io/3dprintall-legal/" target="_blank" rel="noopener" data-i18n="ap.privLink">Privacy policy dell'app</a>
         </div>
@@ -259,19 +292,20 @@
     <section class="section section--alt" id="faq">
       <div class="container faq-wrap">
         <header class="section__head reveal">
-          <p class="eyebrow mono" data-i18n="ap.faqEyebrow">// 04 — FAQ</p>
+          <p class="eyebrow mono" data-i18n="ap.faqEyebrow">// 05 — FAQ</p>
           <h2 data-i18n="ap.faqTitle">Domande frequenti</h2>
         </header>
         <div class="faq">
           <details class="reveal"><summary data-i18n="ap.q1">L'app è gratuita?</summary><p data-i18n="ap.a1">Sì, puoi scaricarla gratis da Google Play.</p></details>
-          <details class="reveal"><summary data-i18n="ap.qIos">È disponibile per iOS?</summary><p data-i18n="ap.aIos">Al momento no: l'app è disponibile soltanto per Android, su Google Play.</p></details>
+          <details class="reveal"><summary data-i18n="ap.qIos">È disponibile per iOS?</summary><p data-i18n="ap.aIos">Non c'è un'app per iPhone, ma puoi usare la versione web da Safari. Con "Aggiungi alla schermata Home" si apre come un'app.</p></details>
+          <details class="reveal"><summary data-i18n="ap.qWeb">Posso usarla dal computer?</summary><p data-i18n="ap.aWeb">Sì, la versione web funziona in qualunque browser, senza installare nulla, con le stesse funzioni dell'app. I dati restano salvati in quel browser: esporta ogni tanto un backup, che puoi anche importare nell'app Android e viceversa.</p></details>
           <details class="reveal"><summary data-i18n="ap.q2">Devo creare un account?</summary><p data-i18n="ap.a2">No. Non serve nessuna registrazione e tutti i dati restano salvati sul tuo telefono.</p></details>
           <details class="reveal"><summary data-i18n="ap.q3">Funziona anche con le stampanti a resina?</summary><p data-i18n="ap.a3">Sì: puoi scegliere tra FDM e resina e salvare anche le tue resine. Se stampi solo FDM, puoi nascondere la sezione resina dalle impostazioni.</p></details>
           <details class="reveal"><summary data-i18n="ap.q4">Il prezzo calcolato è definitivo?</summary><p data-i18n="ap.a4">È una stima basata sui parametri che inserisci. È un ottimo punto di partenza per il tuo preventivo, che puoi poi adattare al cliente.</p></details>
           <details class="reveal"><summary data-i18n="ap.q5">Posso usarla in inglese o in dollari?</summary><p data-i18n="ap.a5">Sì, dalle impostazioni puoi scegliere italiano o inglese ed euro o dollari.</p></details>
           <details class="reveal"><summary data-i18n="ap.q6">Posso mettere il mio logo sui preventivi?</summary><p data-i18n="ap.a6">Sì. In Impostazioni &gt; Dati attività e PDF aggiungi logo, nome, contatti e partita IVA, scegli il colore e la validità del preventivo e decidi quali dettagli mostrare al cliente.</p></details>
           <details class="reveal"><summary data-i18n="ap.q7">Come funzionano le statistiche?</summary><p data-i18n="ap.a7">Contano i preventivi che nello storico segni come completati, nel mese in cui li completi: vedi ricavi, costi, margine, materiale e ore di stampa per il periodo che scegli.</p></details>
-          <details class="reveal"><summary data-i18n="ap.q8">Se cambio telefono perdo i dati?</summary><p data-i18n="ap.a8">No. Da Impostazioni &gt; Backup esporti tutti i dati in un file e lo importi sul nuovo telefono. Su Android i dati vengono salvati anche nel backup automatico di Google, se è attivo.</p></details>
+          <details class="reveal"><summary data-i18n="ap.q8">Se cambio telefono perdo i dati?</summary><p data-i18n="ap.a8">No. Da Impostazioni &gt; Backup esporti tutti i dati in un file e lo importi sul nuovo telefono o nella versione web. Su Android i dati vengono salvati anche nel backup automatico di Google, se è attivo.</p></details>
         </div>
       </div>
     </section>
@@ -286,6 +320,7 @@
           <svg class="ico" aria-hidden="true"><use href="#i-googleplay"/></svg>
           <span><small data-i18n="app.available">Disponibile su</small>Google Play</span>
         </a>
+        <a class="btn btn--ghost cta__web" href="web/" data-web-app data-i18n="ap.webBtn2">oppure usala nel browser →</a>
       </div>
     </section>
   </main>
